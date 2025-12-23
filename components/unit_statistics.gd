@@ -18,10 +18,10 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	processHealthRegen(delta)
+	process_health_regen(delta)
 	pass
 
-func processHealthRegen(delta: float) -> void:
+func process_health_regen(delta: float) -> void:
 	if current_health < max_health:
 		var healPerFrame = health_regen * delta
 		if (current_health + healPerFrame >= max_health):
@@ -29,5 +29,5 @@ func processHealthRegen(delta: float) -> void:
 		else:
 			current_health += healPerFrame
 
-func rollCrit() -> bool:
+func roll_crit() -> bool:
 	return rng.randf() < crit_chance

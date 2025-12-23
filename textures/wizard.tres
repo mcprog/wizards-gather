@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://bml0olv6gk0f2"]
+
+[ext_resource type="Texture2D" uid="uid://davwbx61uwwku" path="res://textures/Wizard_Side_Walk.png" id="1_kd0sn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0d3f"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(0, 0, 93, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lhqi"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(93, 0, 93, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cnsv"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(186, 0, 93, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6a7lt"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(279, 0, 93, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b1s7d"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(372, 0, 93, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_juo4q"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(465, 0, 93, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml0uc"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(558, 0, 93, 77)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rudql"]
+atlas = ExtResource("1_kd0sn")
+region = Rect2(651, 0, 93, 77)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0d3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lhqi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cnsv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6a7lt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b1s7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_juo4q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml0uc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rudql")
+}],
+"loop": true,
+"name": &"run",
+"speed": 12.0
+}]

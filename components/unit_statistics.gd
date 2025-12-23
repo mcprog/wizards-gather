@@ -1,5 +1,6 @@
 class_name UnitStatistics extends Node2D
 
+@export_subgroup("Stats")
 @export var current_health : float
 @export var max_health : float
 @export var damage : float

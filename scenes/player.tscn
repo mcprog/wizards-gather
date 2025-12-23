@@ -1,9 +1,12 @@
-[gd_scene load_steps=3 format=3 uid="uid://yu1c8v3qgvuj"]
+[gd_scene load_steps=4 format=3 uid="uid://yu1c8v3qgvuj"]
 
 [ext_resource type="Script" uid="uid://cxq1rjnskv8ek" path="res://scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="PackedScene" uid="uid://dbadshflbxqpt" path="res://components/move_x_component.tscn" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://cihddxo1nllby" path="res://components/unit_statistics.tscn" id="2_qhqgy"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_3vyb7")
+
+[node name="UnitStatistics" parent="." instance=ExtResource("2_qhqgy")]
 
 [node name="MoveXComponent" parent="." instance=ExtResource("2_g2els")]

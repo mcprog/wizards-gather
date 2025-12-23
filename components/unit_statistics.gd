@@ -3,7 +3,7 @@ class_name UnitStatistics extends Node2D
 @export var current_health : float
 @export var max_health : float
 @export var damage : float
-## The crit chance of the unit. This should be a float on a scale from 0 - 100.
+## The crit chance of the unit. This should be a float on a scale from 0 - 1.
 @export var crit_chance : float
 @export var crit_damage : float
 @export var armor : float

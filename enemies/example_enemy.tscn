@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://3sqik23p6ong"]
+[gd_scene load_steps=5 format=3 uid="uid://3sqik23p6ong"]
 
 [ext_resource type="Script" uid="uid://cf0xnr8llwl03" path="res://enemies/example_enemy.gd" id="1_vu410"]
-[ext_resource type="PackedScene" uid="uid://cihddxo1nllby" path="res://components/unit_statistics.tscn" id="2_n30db"]
+[ext_resource type="PackedScene" path="res://components/unit_statistics.tscn" id="2_n30db"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="3_3aehx"]
+[ext_resource type="SpriteFrames" uid="uid://drwrcnun1x3dn" path="res://textures/goblin.tres" id="4_3aehx"]
 
 [node name="ExampleEnemy" type="Node2D"]
 script = ExtResource("1_vu410")
@@ -13,3 +14,6 @@ script = ExtResource("1_vu410")
 sprite = NodePath("../Sprite")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("4_3aehx")
+animation = &"idle"
+flip_h = true

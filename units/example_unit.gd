@@ -2,9 +2,9 @@ class_name ExampleUnit extends Node2D
 
 
 @export_subgroup("Nodes")
-@onready var animation_component: AnimationComponent = $AnimationComponent
+@export var animation_component: AnimationComponent
+@export var statistics: UnitStatistics
 
-@onready var statistics: UnitStatistics = $UnitStatistics
 @onready var sprite: AnimatedSprite2D = $Sprite
 
 # Called when the node enters the scene tree for the first time.

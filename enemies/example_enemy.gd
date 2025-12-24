@@ -1,4 +1,4 @@
-class_name ExampleEnemy extends BaseEnemy
+class_name ExampleEnemy extends Node2D
 
 
 @export_subgroup("Nodes")

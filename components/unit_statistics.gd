@@ -13,6 +13,17 @@ class_name UnitStatistics extends Node2D
 
 var rng = RandomNumberGenerator.new()
 
+## Call this function to initialize all values.
+func prepare(max_h: float, dam: float, crit_c: float, crit_d: float, arm: float, regen: float, ms: float) -> void:
+	self.max_health = max_h
+	self.current_health = max_h
+	self.damage = dam
+	self.crit_chance = crit_c
+	self.crit_damage = crit_d
+	self.armor = arm
+	self.health_regen = regen
+	self.movespeed = ms
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

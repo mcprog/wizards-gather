@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://yu1c8v3qgvuj"]
+
+[ext_resource type="Script" uid="uid://cxq1rjnskv8ek" path="res://units/base_unit.gd" id="1_02e1h"]
+[ext_resource type="PackedScene" uid="uid://cihddxo1nllby" path="res://components/unit_statistics.tscn" id="2_s3c20"]
+[ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="3_7cfp1"]
+[ext_resource type="SpriteFrames" uid="uid://bml0olv6gk0f2" path="res://textures/wizard.tres" id="4_utkdb"]
+
+[node name="BaseUnit" type="Node2D" node_paths=PackedStringArray("animation_component")]
+script = ExtResource("1_02e1h")
+animation_component = NodePath("AnimationComponent")
+
+[node name="UnitStatistics" parent="." instance=ExtResource("2_s3c20")]
+
+[node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_7cfp1")]
+sprite = NodePath("../Sprite")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("4_utkdb")
+animation = &"run"
+frame_progress = 0.056878038

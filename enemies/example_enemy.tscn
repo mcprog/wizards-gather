@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://brjq62i2v0000"]
+[gd_scene load_steps=4 format=3 uid="uid://3sqik23p6ong"]
 
-[ext_resource type="Script" uid="uid://c55y285pbhqhn" path="res://enemies/example_enemy.gd" id="1_vu410"]
+[ext_resource type="Script" uid="uid://cf0xnr8llwl03" path="res://enemies/example_enemy.gd" id="1_vu410"]
+[ext_resource type="PackedScene" uid="uid://cihddxo1nllby" path="res://components/unit_statistics.tscn" id="2_n30db"]
+[ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="3_3aehx"]
 
 [node name="ExampleEnemy" type="Node2D"]
 script = ExtResource("1_vu410")
+
+[node name="UnitStatistics" parent="." instance=ExtResource("2_n30db")]
+
+[node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_3aehx")]
+sprite = NodePath("../Sprite")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]

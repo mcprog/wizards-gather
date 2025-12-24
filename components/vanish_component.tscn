@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dr3k7elb8o857"]
+
+[ext_resource type="Script" uid="uid://bhponxtii668e" path="res://components/vanish_component.gd" id="1_je75t"]
+
+[node name="VanishComponent" type="Node2D"]
+script = ExtResource("1_je75t")

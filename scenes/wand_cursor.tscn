@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bafbjx03no1rt"]
+
+[ext_resource type="Script" uid="uid://bjgshlmoofg23" path="res://scenes/wand_cursor.gd" id="1_3jjwk"]
+[ext_resource type="Script" uid="uid://bhponxtii668e" path="res://components/vanish_component.gd" id="2_0p5xm"]
+[ext_resource type="Texture2D" uid="uid://c3nphmaf8q43e" path="res://textures/wand_cursor.png" id="2_xannw"]
+
+[node name="WandCursor" type="Node2D" node_paths=PackedStringArray("vanish_component")]
+visible = false
+script = ExtResource("1_3jjwk")
+vanish_component = NodePath("VanishComponent")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_xannw")
+
+[node name="VanishComponent" type="Node2D" parent="."]
+script = ExtResource("2_0p5xm")
+metadata/_custom_type_script = "uid://bhponxtii668e"

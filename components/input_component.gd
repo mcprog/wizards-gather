@@ -1,14 +1,20 @@
 class_name InputComponent extends Node2D
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+var clicked = false
+var click_position: Vector2 = Vector2.ZERO
 
 func handle_input():
-	pass
+	if not clicked and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		clicked = true
+		click_position = get_global_mouse_position()
+		print("Mouse clicked")
+	elif not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		clicked = false
+
+
+func spawn_cursor(cursor: WandCursor) -> bool:
+	if clicked:
+		cursor.position = click_position
+		cursor.start()
+		return true
+	return false

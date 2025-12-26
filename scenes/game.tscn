@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://8tscax6joyre"]
+[gd_scene load_steps=8 format=3 uid="uid://8tscax6joyre"]
 
 [ext_resource type="Script" uid="uid://c2dguh8bubjo1" path="res://scenes/game.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://yu1c8v3qgvuj" path="res://units/example_unit.tscn" id="2_iywne"]
 [ext_resource type="PackedScene" uid="uid://bafbjx03no1rt" path="res://scenes/wand_cursor.tscn" id="2_lbhrr"]
-[ext_resource type="PackedScene" path="res://components/input_component.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://3sqik23p6ong" path="res://enemies/example_enemy.tscn" id="3_p57ef"]
+[ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="6_p57ef"]
+[ext_resource type="Texture2D" uid="uid://dmi5ns1t2wjkh" path="res://icon.svg" id="7_u5sy4"]
 
-[node name="Game" type="Node2D" node_paths=PackedStringArray("input_component")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u5sy4"]
+size = Vector2(129, 128)
+
+[node name="Game" type="Node2D"]
 script = ExtResource("1_yqjtg")
-input_component = NodePath("InputComponent")
-
-[node name="InputComponent" parent="." instance=ExtResource("3_lnu2h")]
 
 [node name="WandCursor" parent="." instance=ExtResource("2_lbhrr")]
 
@@ -19,3 +20,18 @@ position = Vector2(500, 200)
 
 [node name="ExampleUnit" parent="." instance=ExtResource("2_iywne")]
 position = Vector2(93, 115)
+
+[node name="Player" parent="." instance=ExtResource("6_p57ef")]
+position = Vector2(301, 196)
+
+[node name="TempGround" type="StaticBody2D" parent="."]
+position = Vector2(266, 351)
+collision_mask = 26
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="TempGround"]
+texture = ExtResource("7_u5sy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TempGround"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_u5sy4")

@@ -1,11 +1,8 @@
 class_name MoveXComponent extends Node2D
 
+@export_subgroup("Settings")
+@export var speed: float = 100.0
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func handle_horizontal_movement(body: CharacterBody2D, direction: float) -> void:
+	# no delta time since move_and_slide handles that
+	body.velocity.x = direction * speed

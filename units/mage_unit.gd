@@ -1,4 +1,4 @@
-class_name ExampleUnit extends Node2D
+class_name MageUnit extends Node2D
 
 
 @export_subgroup("Nodes")

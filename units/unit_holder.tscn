@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://byloe5551kk4q"]
+
+[ext_resource type="Script" uid="uid://bmix686hs772a" path="res://units/unit_holder.gd" id="1_ehjnj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehjnj"]
+size = Vector2(200, 200)
+
+[node name="UnitHolder" type="Area2D"]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_ehjnj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ehjnj")

@@ -7,7 +7,6 @@ func handle_input():
 	if not clicked and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		clicked = true
 		click_position = get_global_mouse_position()
-		print("Mouse clicked")
 	elif not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		clicked = false
 

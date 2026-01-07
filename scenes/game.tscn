@@ -20,14 +20,15 @@ starter_units = Array[PackedScene]([ExtResource("2_iywne")])
 [node name="ExampleEnemy" parent="." instance=ExtResource("3_p57ef")]
 position = Vector2(500, 200)
 
-[node name="ExampleUnit" parent="." instance=ExtResource("2_iywne")]
-position = Vector2(93, 115)
-
 [node name="Player" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(301, 196)
 
 [node name="UnitHolder" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_u5sy4")]
 player = NodePath("../Player")
+spawn1 = ExtResource("2_iywne")
+spawn2 = ExtResource("2_iywne")
+spawn3 = ExtResource("2_iywne")
+spawn4 = ExtResource("2_iywne")
 
 [node name="TempGround" type="StaticBody2D" parent="."]
 position = Vector2(266, 351)

@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhcdpos01pgrs"]
+
+[ext_resource type="Texture2D" uid="uid://ckmlt8nwy6rt" path="res://textures/ui/Rect-Dark-Default.png" id="1_2omtu"]
+[ext_resource type="Texture2D" uid="uid://byjwpx8wd7vkp" path="res://textures/ui/Rect-Dark-Hover.png" id="2_sg3sv"]
+
+[node name="DarkButton" type="TextureButton"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("1_2omtu")
+texture_pressed = ExtResource("2_sg3sv")
+stretch_mode = 5

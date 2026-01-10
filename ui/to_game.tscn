@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceryd58bfr1ri"]
+[gd_scene load_steps=5 format=3 uid="uid://ceryd58bfr1ri"]
 
 [ext_resource type="Script" uid="uid://bbupr1fh5gier" path="res://ui/to_game.gd" id="1_knc4o"]
+[ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="2_hs284"]
+[ext_resource type="PackedScene" uid="uid://cnj11kj1kqvcs" path="res://utility/simple_ground.tscn" id="3_rgrbq"]
+[ext_resource type="FontFile" uid="uid://bfeyeolwww868" path="res://fonts/Beholden-Regular.ttf" id="4_4n4l5"]
 
 [node name="ToGame" type="Control"]
 layout_mode = 3
@@ -10,3 +13,35 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_knc4o")
+
+[node name="Player" parent="." instance=ExtResource("2_hs284")]
+position = Vector2(597.99994, 301.99997)
+
+[node name="SimpleGround" parent="." instance=ExtResource("3_rgrbq")]
+position = Vector2(599, 353)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = 154.0
+offset_right = 179.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4n4l5")
+theme_override_font_sizes/font_size = 24
+text = "Loading..."
+horizontal_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_4n4l5")
+theme_override_font_sizes/font_size = 24

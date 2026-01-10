@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctlwgv5um3e6"]
+
+[ext_resource type="Script" uid="uid://dq8po8jr2kado" path="res://components/scrolling_component.gd" id="1_ws1d2"]
+
+[node name="ScrollingComponent" type="Node2D"]
+script = ExtResource("1_ws1d2")

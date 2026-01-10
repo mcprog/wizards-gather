@@ -40,4 +40,4 @@ sprite = NodePath("../Sprite")
 [node name="GravityComponent" parent="." instance=ExtResource("6_txxjr")]
 
 [node name="JumpComponent" parent="." instance=ExtResource("7_utfjq")]
-jump_velocity = -500.0
+jump_velocity = -650.0

@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cihddxo1nllby"]
-
-[ext_resource type="Script" uid="uid://ffydqlfoe721" path="res://components/unit_statistics.gd" id="1_wtowk"]
-
-[node name="UnitStatistics" type="Node2D"]
-script = ExtResource("1_wtowk")

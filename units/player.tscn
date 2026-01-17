@@ -1,18 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://cs0802lhhv4fd"]
+[gd_scene load_steps=10 format=3 uid="uid://cs0802lhhv4fd"]
 
 [ext_resource type="Script" uid="uid://bjdgqqbkcxe3e" path="res://units/player.gd" id="1_tis1o"]
 [ext_resource type="SpriteFrames" uid="uid://cgghydl16clso" path="res://textures/warrior.tres" id="2_wegok"]
-[ext_resource type="PackedScene" uid="uid://c3pcqblmrcbon" path="res://components/input_component.tscn" id="3_s4qu6"]
+[ext_resource type="PackedScene" path="res://components/input_component.tscn" id="3_s4qu6"]
 [ext_resource type="PackedScene" uid="uid://dbadshflbxqpt" path="res://components/move_x_component.tscn" id="4_7bga3"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="5_7bga3"]
 [ext_resource type="PackedScene" uid="uid://d0eppyni6jg6m" path="res://components/gravity_component.tscn" id="6_txxjr"]
+[ext_resource type="PackedScene" uid="uid://cnm3b8mo6q2lo" path="res://components/health_component.tscn" id="7_o5fyc"]
 [ext_resource type="PackedScene" uid="uid://bch5va60785uo" path="res://components/jump_component.tscn" id="7_utfjq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wegok"]
 radius = 8.0
 height = 38.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_component", "move_x_component", "animation_component", "gravity_component", "jump_component")]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_component", "move_x_component", "animation_component", "gravity_component", "health_component", "jump_component")]
 scale = Vector2(2.5, 2.5)
 collision_layer = 2
 collision_mask = 57
@@ -21,6 +22,7 @@ input_component = NodePath("InputComponent")
 move_x_component = NodePath("MoveXComponent")
 animation_component = NodePath("AnimationComponent")
 gravity_component = NodePath("GravityComponent")
+health_component = NodePath("HealthComponent")
 jump_component = NodePath("JumpComponent")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
@@ -38,6 +40,8 @@ shape = SubResource("CapsuleShape2D_wegok")
 sprite = NodePath("../Sprite")
 
 [node name="GravityComponent" parent="." instance=ExtResource("6_txxjr")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("7_o5fyc")]
 
 [node name="JumpComponent" parent="." instance=ExtResource("7_utfjq")]
 jump_velocity = -650.0

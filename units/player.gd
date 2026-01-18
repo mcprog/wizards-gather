@@ -1,6 +1,5 @@
 class_name Player extends CharacterBody2D
 
-
 @export_group("Nodes")
 @export var input_component: InputComponent
 @export var movement_component: MovementComponent
@@ -8,6 +7,7 @@ class_name Player extends CharacterBody2D
 @export var gravity_component: GravityComponent
 @export var health_component: HealthComponent
 
+# May not need
 signal player_died
 signal game_paused
 
@@ -20,5 +20,8 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	gravity_component.handle_gravity(self, delta)
 	input_component.handle_input()
-	movement_component.handle_movement(self)
+	movement_component.handle_movement(self, input_component.direction_x, input_component.down_jump, input_component.jump)
 	move_and_slide()
+	
+	if position.y > Constants.GAME_PX_HEIGHT + Constants.HALF_PX_PLAYER_HEIGHT:
+		get_tree().change_scene_to_packed(Constants.DEATH_MENU)

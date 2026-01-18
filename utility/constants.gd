@@ -4,6 +4,12 @@ extends Node
 # Scenes
 const MAIN_MENU = preload("res://ui/main_menu.tscn")
 const GAME_ENTRY = preload("res://scenes/game.tscn")
+const DEATH_MENU = preload("res://ui/death.tscn")
+
+# World
+const GAME_PX_HEIGHT = 648
+const GAME_PX_WIDTH = 1152
+const HALF_PX_PLAYER_HEIGHT = 52
 
 # Stats
 const PLAYER_BASE_HEALTH = 200.0

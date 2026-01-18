@@ -7,10 +7,6 @@ class_name Player extends CharacterBody2D
 @export var gravity_component: GravityComponent
 @export var health_component: HealthComponent
 
-# May not need
-signal player_died
-signal game_paused
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animation_component.play_move_animation()
@@ -20,6 +16,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	gravity_component.handle_gravity(self, delta)
 	input_component.handle_input()
+	# Overrites down jump input value if on bottom platform
+	if position.y > Constants.BOTTOM_PLATFORM_PX:
+		input_component.down_jump = false
 	movement_component.handle_movement(self, input_component.direction_x, input_component.down_jump, input_component.jump)
 	move_and_slide()
 	

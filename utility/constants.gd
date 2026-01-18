@@ -10,6 +10,7 @@ const DEATH_MENU = preload("res://ui/death.tscn")
 const GAME_PX_HEIGHT = 648
 const GAME_PX_WIDTH = 1152
 const HALF_PX_PLAYER_HEIGHT = 52
+const BOTTOM_PLATFORM_PX = 520
 
 # Stats
 const PLAYER_BASE_HEALTH = 200.0

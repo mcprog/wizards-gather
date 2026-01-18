@@ -3,6 +3,7 @@ extends Node
 
 # Scenes
 const MAIN_MENU = preload("res://ui/main_menu.tscn")
+const GAME_ENTRY = preload("res://scenes/game.tscn")
 
 # Stats
 const PLAYER_BASE_HEALTH = 200.0

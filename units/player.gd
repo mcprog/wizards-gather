@@ -8,6 +8,9 @@ class_name Player extends CharacterBody2D
 @export var gravity_component: GravityComponent
 @export var health_component: HealthComponent
 
+signal player_died
+signal game_paused
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animation_component.play_move_animation()

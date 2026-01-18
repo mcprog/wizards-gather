@@ -1,5 +1,5 @@
-class_name Constants
-
+# Cannot have class name since it has autoload global name
+extends Node
 
 # Scenes
 const MAIN_MENU = preload("res://ui/main_menu.tscn")

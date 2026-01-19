@@ -3,5 +3,17 @@ class_name AnimationComponent extends Node2D
 @export_subgroup("Nodes")
 @export var sprite: AnimatedSprite2D
 
+var direction = 1.0
+var jumping = false
+
 func play_move_animation():
 	sprite.play("run")
+
+func handle_animation(direction_x: float, is_jumping: bool, is_on_floor):
+	if direction != direction_x:
+		direction = direction_x
+		sprite.flip_h = direction < 0
+	if is_jumping and not jumping:
+		sprite.play("jump")
+	if is_on_floor:
+		play_move_animation()

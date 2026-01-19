@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bjdgqqbkcxe3e" path="res://units/player.gd" id="1_tis1o"]
 [ext_resource type="SpriteFrames" uid="uid://cgghydl16clso" path="res://textures/warrior.tres" id="2_wegok"]
-[ext_resource type="PackedScene" path="res://components/input_component.tscn" id="3_s4qu6"]
+[ext_resource type="PackedScene" uid="uid://c3pcqblmrcbon" path="res://components/input_component.tscn" id="3_s4qu6"]
 [ext_resource type="PackedScene" uid="uid://dbadshflbxqpt" path="res://components/movement_component.tscn" id="4_7bga3"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="5_7bga3"]
 [ext_resource type="PackedScene" uid="uid://d0eppyni6jg6m" path="res://components/gravity_component.tscn" id="6_txxjr"]
@@ -41,3 +41,5 @@ sprite = NodePath("../Sprite")
 [node name="GravityComponent" parent="." instance=ExtResource("6_txxjr")]
 
 [node name="HealthComponent" parent="." instance=ExtResource("7_o5fyc")]
+
+[connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

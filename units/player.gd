@@ -22,6 +22,8 @@ func _physics_process(delta: float) -> void:
 	if position.y > Constants.BOTTOM_PLATFORM_PX:
 		input_component.down_jump = false
 	movement_component.handle_movement(self, input_component.direction_x, input_component.down_jump, input_component.jump)
+	animation_component.handle_animation(input_component.direction_x, movement_component.is_jumping, is_on_floor())
+	
 	move_and_slide()
 	
 	if position.y > Constants.GAME_PX_HEIGHT + Constants.HALF_PX_PLAYER_HEIGHT:

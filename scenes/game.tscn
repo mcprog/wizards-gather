@@ -11,6 +11,7 @@ script = ExtResource("1_yqjtg")
 starter_units = Array[PackedScene]([ExtResource("2_iywne")])
 
 [node name="ForestWorld" parent="." instance=ExtResource("5_iywne")]
+script = null
 
 [node name="Player" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(301, 196)

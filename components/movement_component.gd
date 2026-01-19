@@ -6,27 +6,20 @@ class_name MovementComponent extends Node2D
 
 var is_jumping: bool = false
 
-func handle_movement(body: CharacterBody2D) -> void:
-	handle_horizontal_movement(body)
-	handle_vertical_movement(body)
+func handle_movement(body: CharacterBody2D, direction_x: float, down_jump: bool, jump: bool) -> void:
+	handle_horizontal_movement(body, direction_x)
+	handle_vertical_movement(body, down_jump, jump)
 
-func handle_horizontal_movement(body: CharacterBody2D) -> void:
-	var direction = 0.0
-	if Input.is_action_pressed("left"):
-		print_debug("Left was pressed")
-		direction -= 2.0
-	if Input.is_action_pressed("right"):
-		print_debug("Right was pressed")
-		direction += 2.0
+func handle_horizontal_movement(body: CharacterBody2D, direction_x: float) -> void:
 	# no delta time since move_and_slide handles that
-	body.velocity.x = direction * speed
+	body.velocity.x = direction_x * speed
 
-func handle_vertical_movement(body: CharacterBody2D) -> void:
+func handle_vertical_movement(body: CharacterBody2D, down_jump: bool, jump: bool) -> void:
 	if body.is_on_floor():
-		if Input.is_action_pressed("down"):
+		if down_jump:
 			# Hack the position below the platform
 			body.position.y += 1
-		if Input.is_action_pressed("jump"):
+		if jump:
 			body.velocity.y = jump_velocity
 	is_jumping = body.velocity.y < 0 and not body.is_on_floor()
 	

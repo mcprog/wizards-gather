@@ -13,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_knc4o")
+delay = 0.25
 
 [node name="Player" parent="." instance=ExtResource("2_hs284")]
 position = Vector2(597.99994, 301.99997)

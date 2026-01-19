@@ -4,6 +4,9 @@ class_name InputComponent extends Node2D
 
 var clicked = false
 var click_position: Vector2 = Vector2.ZERO
+var direction_x = 0.0
+var down_jump = false
+var jump = false
 
 
 func handle_input():
@@ -12,9 +15,13 @@ func handle_input():
 		click_position = get_global_mouse_position()
 	elif not Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		clicked = false
+		
+	direction_x = Input.get_axis("left", "right")
+	
+	down_jump = Input.is_action_pressed("down")
+	jump = Input.is_action_pressed("jump")
 	
 	if Input.is_action_just_pressed("escape"):
-		print_debug("Escape was pressed")
 		get_tree().change_scene_to_packed(Constants.MAIN_MENU)
 
 func spawn_cursor(cursor: WandCursor) -> bool:

@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://cc2f2nktbes6m"]
+
+[ext_resource type="Script" uid="uid://jegw783ur7wq" path="res://ui/death.gd" id="1_ltt6a"]
+[ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="2_idxcp"]
+[ext_resource type="PackedScene" uid="uid://cnj11kj1kqvcs" path="res://utility/simple_ground.tscn" id="3_ltt6a"]
+[ext_resource type="FontFile" uid="uid://bfeyeolwww868" path="res://fonts/Beholden-Regular.ttf" id="4_e0yab"]
+[ext_resource type="PackedScene" uid="uid://dhcdpos01pgrs" path="res://ui/dark_button.tscn" id="5_idxcp"]
+[ext_resource type="FontFile" uid="uid://ijfvv6tnsiyp" path="res://fonts/Beholden-Bold.ttf" id="6_ltt6a"]
+
+[node name="Death" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ltt6a")
+
+[node name="Player" parent="." instance=ExtResource("2_idxcp")]
+position = Vector2(597.99994, 158.00002)
+
+[node name="SimpleGround" parent="." instance=ExtResource("3_ltt6a")]
+position = Vector2(599, 209.00003)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -160.0
+offset_top = 211.0
+offset_right = 179.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 15
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_e0yab")
+theme_override_font_sizes/font_size = 24
+text = "You Died."
+horizontal_alignment = 1
+
+[node name="RestartButton" parent="VBoxContainer" instance=ExtResource("5_idxcp")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/RestartButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = -12.5
+offset_right = 105.5
+offset_bottom = 12.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ltt6a")
+theme_override_font_sizes/font_size = 36
+text = "Restart"
+horizontal_alignment = 1
+
+[node name="MainMenuButton" parent="VBoxContainer" instance=ExtResource("5_idxcp")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/MainMenuButton"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.5
+offset_top = -20.0
+offset_right = 105.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_ltt6a")
+theme_override_font_sizes/font_size = 36
+text = "Main Menu"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

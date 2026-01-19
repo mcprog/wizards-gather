@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 	position += direction.normalized() * SPEED * delta
 
 
-func set_params(value: int, is_crit: bool = false, is_pure: bool = false) -> void:
+func set_params(pos: Vector2, value: int, is_crit: bool = false, is_pure: bool = false) -> void:
 	text_info = str(value)
 	if is_pure:
 		if is_crit: crit_img = Constants.PURE_CRIT_ICON
@@ -40,6 +40,8 @@ func set_params(value: int, is_crit: bool = false, is_pure: bool = false) -> voi
 	else:
 		if is_crit: crit_img = Constants.BASE_CRIT_ICON
 		text_color = Constants.BASIC_DAMAGE_COLOR
+	
+	self.position = pos
 
 
 func _on_life_timer_timeout() -> void:

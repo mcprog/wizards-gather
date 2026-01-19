@@ -23,7 +23,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	process_health_regen(delta)
-	pass
 
 ## Handles health regeneration per tick
 func process_health_regen(delta: float) -> void:

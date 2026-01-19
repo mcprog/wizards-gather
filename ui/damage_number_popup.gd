@@ -22,7 +22,7 @@ func _ready() -> void:
 	text_label.add_theme_color_override("font_outline_color", Color.BLACK)
 	text_label.add_theme_constant_override("outline_size", roundi(BASE_TEXT_SIZE / 16.0))
 	if crit_img != null:
-		text_label.add_image(crit_img, roundi(BASE_TEXT_SIZE / 2.0), roundi(BASE_TEXT_SIZE / 2.0))
+		text_label.add_image(crit_img, roundi(BASE_TEXT_SIZE), roundi(BASE_TEXT_SIZE))
 	text_label.append_text(text_info)
 	life_timer.start(LIFE_DURATION)
 
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	position += direction.normalized() * SPEED * delta
 
 
-func set_params(pos: Vector2, value: int, is_crit: bool = false, is_pure: bool = false) -> void:
+func prepare(pos: Vector2, value: int, is_crit: bool = false, is_pure: bool = false) -> void:
 	text_info = str(value)
 	text_color = Constants.BASIC_DAMAGE_COLOR
 	# Define icon and color for PURE / CRIT damage types

@@ -4,7 +4,7 @@ extends Node
 
 
 # Fonts
-const DEFAULT_FONT = preload("res://fonts/Beholden-Regular.ttf")
+const DEFAULT_FONT = preload("res://fonts/Beholden-Bold.ttf")
 
 # Scenes
 const MAIN_MENU = preload("res://ui/main_menu.tscn")

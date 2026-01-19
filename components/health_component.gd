@@ -49,7 +49,7 @@ func take_damage(dmg_pos: Vector2, raw_damage: float, is_crit: bool, is_pure: bo
 	
 	# Spawn damage numbers popup
 	var numbers_obj = numbers_popup.instantiate()
-	numbers_obj.set_params(dmg_pos, final_damage, is_crit, is_pure)
+	numbers_obj.prepare(dmg_pos, final_damage, is_crit, is_pure)
 	get_tree().root.add_child(numbers_obj)
 
 	if current_health <= 0.0:

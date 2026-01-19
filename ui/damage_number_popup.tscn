@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cu1026rqbc65w" path="res://ui/damage_number_popup.gd" id="1_80jk1"]
 
 [node name="DamageNumberPopup" type="Node2D"]
+z_index = 1
+z_as_relative = false
 script = ExtResource("1_80jk1")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]

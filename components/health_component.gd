@@ -1,6 +1,8 @@
 class_name HealthComponent extends Node2D
 
 
+@onready var numbers_popup: PackedScene = preload("res://ui/damage_number_popup.tscn")
+
 @export_subgroup("Stats", "hc")
 @export var current_health : float
 @export var max_health : float
@@ -34,17 +36,25 @@ func process_health_regen(delta: float) -> void:
 			current_health += heal_per_frame
 
 ## Handles taking damage
-func take_damage(raw_damage: float) -> void:
-	const BASE_ARMOR_MODIFIER = 100
+func take_damage(dmg_pos: Vector2, raw_damage: float, is_crit: bool, is_pure: bool) -> void:
 	## BASE_ARMOR_MODIFIER = 100 means   |  BASE_ARMOR_MODIFIER = 200 means
 	## 50  Armor = 33% damage reduction  |  50  Armor = 20% damage reduction
 	## 100 Armor = 50% damage reduction  |  100 Armor = 33% damage reduction
 	## 200 Armor = 66% damage reduction  |  200 Armor = 50% damage reduction
 	## 300 Armor = 75% damage reduction  |  300 Armor = 60% damage reduction
-	var mitigated_damage = raw_damage * (BASE_ARMOR_MODIFIER / armor + BASE_ARMOR_MODIFIER)
-	if current_health - mitigated_damage <= 0.0:
-		## Handle player death
-		pass
-	else:
-		current_health -= mitigated_damage
-	#Global.spawn_damage_numbers(mitigated_damage, is_crit)
+	var mitigated_damage = raw_damage * (Constants.BASE_ARMOR_MODIFIER / (armor + Constants.BASE_ARMOR_MODIFIER))
+	
+	current_health -= mitigated_damage
+	print_debug(mitigated_damage)
+	
+	# Spawn damage numbers popup
+	var numbers_obj = numbers_popup.instantiate()
+	numbers_obj.set_params(dmg_pos, mitigated_damage, is_crit, is_pure)
+	get_tree().root.add_child(numbers_obj)
+
+	if current_health <= 0.0:
+		if get_parent().is_in_group(Constants.PLAYER_GLOBAL_GROUP_STRING):
+			get_tree().change_scene_to_packed(Constants.DEATH_MENU)
+		else:
+			# Handle enemy death using get_parent()
+			pass

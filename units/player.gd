@@ -29,4 +29,4 @@ func _physics_process(delta: float) -> void:
 		get_tree().change_scene_to_packed(Constants.DEATH_MENU)
 
 	if input_component.debug:
-		health_component.take_damage(self.position, 12.0, true, false)
+		health_component.take_damage(self.position, 12.0, true, true)

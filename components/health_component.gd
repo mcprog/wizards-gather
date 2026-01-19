@@ -42,14 +42,14 @@ func take_damage(dmg_pos: Vector2, raw_damage: float, is_crit: bool, is_pure: bo
 	## 100 Armor = 50% damage reduction  |  100 Armor = 33% damage reduction
 	## 200 Armor = 66% damage reduction  |  200 Armor = 50% damage reduction
 	## 300 Armor = 75% damage reduction  |  300 Armor = 60% damage reduction
-	var mitigated_damage = raw_damage * (Constants.BASE_ARMOR_MODIFIER / (armor + Constants.BASE_ARMOR_MODIFIER))
-	
-	current_health -= mitigated_damage
-	print_debug(mitigated_damage)
+	var final_damage = raw_damage
+	if not is_pure:	final_damage = raw_damage * (Constants.BASE_ARMOR_MODIFIER / (armor + Constants.BASE_ARMOR_MODIFIER))
+	current_health -= final_damage
+	print_debug(final_damage)
 	
 	# Spawn damage numbers popup
 	var numbers_obj = numbers_popup.instantiate()
-	numbers_obj.set_params(dmg_pos, mitigated_damage, is_crit, is_pure)
+	numbers_obj.set_params(dmg_pos, final_damage, is_crit, is_pure)
 	get_tree().root.add_child(numbers_obj)
 
 	if current_health <= 0.0:

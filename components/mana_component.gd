@@ -11,6 +11,14 @@ class_name ManaComponent extends Node2D
 
 var is_max_mana: bool = false
 
+
+## Call this function to initialize all values
+func prepare(max_mana: float, attacks_per_second: float, mana_per_second: float) -> void:
+	self.max_mana = max_mana
+	self.current_mana = max_mana
+	self.attack_speed = attacks_per_second
+	self.mana_regen = mana_per_second
+
 func _ready() -> void:
 	pass # Replace with function body.
 

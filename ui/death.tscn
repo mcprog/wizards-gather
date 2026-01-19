@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cc2f2nktbes6m"]
 
 [ext_resource type="Script" uid="uid://jegw783ur7wq" path="res://ui/death.gd" id="1_ltt6a"]
-[ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="2_idxcp"]
+[ext_resource type="PackedScene" uid="uid://ctumsq5iwf204" path="res://units/dummy_player.tscn" id="2_ltt6a"]
 [ext_resource type="PackedScene" uid="uid://cnj11kj1kqvcs" path="res://utility/simple_ground.tscn" id="3_ltt6a"]
 [ext_resource type="FontFile" uid="uid://bfeyeolwww868" path="res://fonts/Beholden-Regular.ttf" id="4_e0yab"]
 [ext_resource type="PackedScene" uid="uid://dhcdpos01pgrs" path="res://ui/dark_button.tscn" id="5_idxcp"]
@@ -16,8 +16,9 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ltt6a")
 
-[node name="Player" parent="." instance=ExtResource("2_idxcp")]
-position = Vector2(597.99994, 158.00002)
+[node name="DummyPlayer" parent="." instance=ExtResource("2_ltt6a")]
+position = Vector2(599, 159)
+start_animation = 2
 
 [node name="SimpleGround" parent="." instance=ExtResource("3_ltt6a")]
 position = Vector2(599, 209.00003)

@@ -1,5 +1,11 @@
 class_name Player extends CharacterBody2D
 
+enum PlayerAnimation {
+	RUN,
+	JUMP,
+	HURT
+}
+
 @export_group("Components")
 @export var input_component: InputComponent
 @export var movement_component: MovementComponent
@@ -14,7 +20,6 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	print_debug(health_component.current_health)
 	gravity_component.handle_gravity(self, delta)
 	input_component.handle_input()
 	# Overrites down jump input value if on bottom platform

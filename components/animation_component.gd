@@ -9,6 +9,9 @@ var jumping = false
 func play_move_animation():
 	sprite.play("run")
 
+func play_animation(animation: String):
+	sprite.play(animation)
+
 func handle_animation(direction_x: float, is_jumping: bool, is_on_floor):
 	if direction != direction_x:
 		direction = direction_x

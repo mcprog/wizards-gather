@@ -1,5 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://ctumsq5iwf204"]
+[gd_scene load_steps=3 format=3 uid="uid://ctumsq5iwf204"]
 
 [ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="1_rw31n"]
+[ext_resource type="Script" uid="uid://cn3xasbxrrm7t" path="res://units/dummy_player.gd" id="2_0ic8p"]
 
 [node name="DummyPlayer" instance=ExtResource("1_rw31n")]
+script = ExtResource("2_0ic8p")
+start_animation = 0
+
+[node name="Sprite" parent="." index="0"]
+animation = &"hurt"

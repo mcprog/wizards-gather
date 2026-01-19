@@ -1,5 +1,6 @@
 class_name HealthComponent extends Node2D
 
+
 @export_subgroup("Stats", "hc")
 @export var current_health : float
 @export var max_health : float
@@ -26,15 +27,15 @@ func _process(delta: float) -> void:
 func process_health_regen(delta: float) -> void:
 	if current_health < max_health:
 		# Multiply by delta to handle HP/s
-		var healPerFrame = health_regen * delta
-		if (current_health + healPerFrame >= max_health):
+		var heal_per_frame = health_regen * delta
+		if (current_health + heal_per_frame >= max_health):
 			current_health = max_health
 		else:
-			current_health += healPerFrame
+			current_health += heal_per_frame
 
 ## Handles taking damage
 func take_damage(raw_damage: float) -> void:
-	var BASE_ARMOR_MODIFIER = 100
+	const BASE_ARMOR_MODIFIER = 100
 	## BASE_ARMOR_MODIFIER = 100 means   |  BASE_ARMOR_MODIFIER = 200 means
 	## 50  Armor = 33% damage reduction  |  50  Armor = 20% damage reduction
 	## 100 Armor = 50% damage reduction  |  100 Armor = 33% damage reduction
@@ -46,3 +47,4 @@ func take_damage(raw_damage: float) -> void:
 		pass
 	else:
 		current_health -= mitigated_damage
+	#Global.spawn_damage_numbers(mitigated_damage, is_crit)

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://8tscax6joyre"]
+[gd_scene load_steps=7 format=3 uid="uid://8tscax6joyre"]
 
 [ext_resource type="Script" uid="uid://c2dguh8bubjo1" path="res://scenes/game.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://yu1c8v3qgvuj" path="res://units/mage/mage_unit.tscn" id="2_iywne"]
+[ext_resource type="PackedScene" uid="uid://4umkcl650t6d" path="res://scenes/forest_background.tscn" id="3_p57ef"]
 [ext_resource type="PackedScene" uid="uid://cd3am5taonrbv" path="res://scenes/forest_world.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://byloe5551kk4q" path="res://units/unit_holder.tscn" id="6_u5sy4"]
@@ -10,8 +11,9 @@
 script = ExtResource("1_yqjtg")
 starter_units = Array[PackedScene]([ExtResource("2_iywne")])
 
+[node name="ForestBackground" parent="." instance=ExtResource("3_p57ef")]
+
 [node name="ForestWorld" parent="." instance=ExtResource("5_iywne")]
-script = null
 
 [node name="Player" parent="." instance=ExtResource("6_p57ef")]
 position = Vector2(301, 196)

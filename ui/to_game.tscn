@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ceryd58bfr1ri"]
+[gd_scene load_steps=6 format=3 uid="uid://ceryd58bfr1ri"]
 
 [ext_resource type="Script" uid="uid://bbupr1fh5gier" path="res://ui/to_game.gd" id="1_knc4o"]
 [ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="2_hs284"]
+[ext_resource type="PackedScene" uid="uid://4umkcl650t6d" path="res://scenes/forest_background.tscn" id="2_rwxqj"]
 [ext_resource type="PackedScene" uid="uid://cnj11kj1kqvcs" path="res://utility/simple_ground.tscn" id="3_rgrbq"]
 [ext_resource type="FontFile" uid="uid://bfeyeolwww868" path="res://fonts/Beholden-Regular.ttf" id="4_4n4l5"]
 
@@ -14,6 +15,8 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_knc4o")
 delay = 0.25
+
+[node name="ForestBackground" parent="." instance=ExtResource("2_rwxqj")]
 
 [node name="Player" parent="." instance=ExtResource("2_hs284")]
 position = Vector2(597.99994, 301.99997)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://pkwc1nju807i"]
+[gd_scene load_steps=7 format=3 uid="uid://pkwc1nju807i"]
 
 [ext_resource type="Script" uid="uid://di4k6jf6kfwdp" path="res://ui/main_menu.gd" id="1_0dkrt"]
 [ext_resource type="PackedScene" uid="uid://dhcdpos01pgrs" path="res://ui/dark_button.tscn" id="1_t7e0r"]
 [ext_resource type="PackedScene" uid="uid://cd3am5taonrbv" path="res://scenes/forest_world.tscn" id="2_8uxxo"]
+[ext_resource type="PackedScene" uid="uid://4umkcl650t6d" path="res://scenes/forest_background.tscn" id="2_ei257"]
 [ext_resource type="FontFile" uid="uid://ijfvv6tnsiyp" path="res://fonts/Beholden-Bold.ttf" id="2_wk0pr"]
 [ext_resource type="FontFile" uid="uid://cq68pghecyjlq" path="res://fonts/Beholden-Bold-Italic.ttf" id="3_rmr83"]
 
@@ -14,6 +15,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_0dkrt")
+
+[node name="ForestBackground" parent="." instance=ExtResource("2_ei257")]
 
 [node name="ForestWorld" parent="." instance=ExtResource("2_8uxxo")]
 

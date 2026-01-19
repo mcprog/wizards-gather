@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsrlom7pude8w"]
+
+[ext_resource type="Script" uid="uid://dmelh8ww7f8ml" path="res://drops/coin.gd" id="1_ip0tg"]
+[ext_resource type="SpriteFrames" uid="uid://eflygxfyx8et" path="res://textures/drops/coins.tres" id="2_2mxgy"]
+[ext_resource type="PackedScene" uid="uid://brahohsq61aed" path="res://components/pickup_component.tscn" id="3_0a06k"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0a06k"]
+radius = 9.0
+
+[node name="Coin" type="Node2D" node_paths=PackedStringArray("pickup_component")]
+script = ExtResource("1_ip0tg")
+pickup_component = NodePath("PickupComponent")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_2mxgy")
+animation = &"gold_coin"
+frame = 3
+frame_progress = 0.20389028
+
+[node name="PickupComponent" parent="." instance=ExtResource("3_0a06k")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupComponent"]
+shape = SubResource("CircleShape2D_0a06k")

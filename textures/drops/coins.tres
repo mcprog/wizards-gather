@@ -1,0 +1,168 @@
+[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://eflygxfyx8et"]
+
+[ext_resource type="Texture2D" uid="uid://shlq4tyc4j0t" path="res://textures/drops/coins18x18.png" id="1_we1oh"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we1oh"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(0, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8adip"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(18, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rlcj"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(36, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7v2b"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(54, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7jd2"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(72, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5xnbq"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(90, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nm0nj"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(108, 18, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwmqs"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u84lg"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjy3d"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jd43r"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(54, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5fq2h"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(72, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0w04k"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(90, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_41em0"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(108, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p8p0"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(0, 36, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b87yu"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(18, 36, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx2is"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(36, 36, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nosxe"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(54, 36, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f5a2q"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(72, 36, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ej2k4"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(90, 36, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46e2b"]
+atlas = ExtResource("1_we1oh")
+region = Rect2(108, 36, 18, 18)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we1oh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8adip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rlcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7v2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7jd2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5xnbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nm0nj")
+}],
+"loop": true,
+"name": &"copper_coin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwmqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u84lg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjy3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jd43r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5fq2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0w04k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_41em0")
+}],
+"loop": true,
+"name": &"gold_coin",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p8p0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b87yu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx2is")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nosxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f5a2q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ej2k4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46e2b")
+}],
+"loop": true,
+"name": &"silver_coin",
+"speed": 5.0
+}]

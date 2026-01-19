@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://0mh33up8dynp"]
+
+[ext_resource type="Script" uid="uid://ikvj06x57jl7" path="res://world/dual_sprite.gd" id="1_ruldv"]
+
+[node name="DualSprite" type="Sprite2D"]
+script = ExtResource("1_ruldv")

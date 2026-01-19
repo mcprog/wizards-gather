@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c2dguh8bubjo1" path="res://scenes/game.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://yu1c8v3qgvuj" path="res://units/mage/mage_unit.tscn" id="2_iywne"]
-[ext_resource type="PackedScene" uid="uid://4umkcl650t6d" path="res://scenes/forest_background.tscn" id="3_p57ef"]
-[ext_resource type="PackedScene" uid="uid://cd3am5taonrbv" path="res://scenes/forest_world.tscn" id="5_iywne"]
+[ext_resource type="PackedScene" uid="uid://4umkcl650t6d" path="res://world/forest_background.tscn" id="3_p57ef"]
+[ext_resource type="PackedScene" uid="uid://cd3am5taonrbv" path="res://world/forest_world.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://byloe5551kk4q" path="res://units/unit_holder.tscn" id="6_u5sy4"]
 

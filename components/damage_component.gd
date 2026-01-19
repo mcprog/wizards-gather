@@ -1,5 +1,6 @@
 class_name DamageComponent extends Node2D
 
+
 @export_subgroup("Stats", "dc")
 @export var damage : float
 ## The crit chance of the unit. This should be a float on a scale from 0 - 1.

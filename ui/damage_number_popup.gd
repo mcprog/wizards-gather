@@ -5,6 +5,7 @@ class_name DamageNumberPopup extends Node2D
 @onready var life_timer: Timer = $LifeTimer
 
 const LIFE_DURATION = 0.9
+const BASE_TEXT_SIZE = 32
 const SPEED = 4
 
 var rng = RandomNumberGenerator.new()
@@ -13,15 +14,15 @@ var text_info = ""
 var crit_img = null
 
 func _ready() -> void:
-	self.position += Vector2(rng.randf() * 5, rng.randf() * 5)
-	text_label.text = " "
+	self.position += Vector2(rng.randf() * 10, rng.randf() * 10)
+	text_label.text = "[center]"
 	text_label.add_theme_font_override("normal_font", Constants.DEFAULT_FONT)
-	text_label.add_theme_font_size_override("normal_font_size", 16)
+	text_label.add_theme_font_size_override("normal_font_size", BASE_TEXT_SIZE)
 	text_label.add_theme_color_override("default_color", text_color)
 	text_label.add_theme_color_override("font_outline_color", Color.BLACK)
-	text_label.add_theme_constant_override("outline_size", 2)
+	text_label.add_theme_constant_override("outline_size", roundi(BASE_TEXT_SIZE / 16.0))
 	if crit_img != null:
-		text_label.add_image(crit_img, 8, 8)
+		text_label.add_image(crit_img, roundi(BASE_TEXT_SIZE / 2.0), roundi(BASE_TEXT_SIZE / 2.0))
 	text_label.append_text(text_info)
 	life_timer.start(LIFE_DURATION)
 
@@ -34,13 +35,16 @@ func _process(delta: float) -> void:
 
 func set_params(pos: Vector2, value: int, is_crit: bool = false, is_pure: bool = false) -> void:
 	text_info = str(value)
+	text_color = Constants.BASIC_DAMAGE_COLOR
+	# Define icon and color for PURE / CRIT damage types
 	if is_pure:
 		if is_crit: crit_img = Constants.PURE_CRIT_ICON
 		text_color = Constants.PURE_DAMAGE_COLOR
 	else:
-		if is_crit: crit_img = Constants.BASE_CRIT_ICON
-		text_color = Constants.BASIC_DAMAGE_COLOR
-	
+		if is_crit: 
+			crit_img = Constants.BASE_CRIT_ICON
+			text_color = Constants.CRIT_DAMAGE_COLOR
+	# Set position
 	self.position = pos
 
 

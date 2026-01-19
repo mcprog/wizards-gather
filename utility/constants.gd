@@ -25,5 +25,6 @@ const BASE_CRIT_ICON = preload("res://textures/ui/damage_number/crit_icon_base.p
 const PURE_CRIT_ICON = preload("res://textures/ui/damage_number/crit_icon_pure.png")
 
 # Colors
-const BASIC_DAMAGE_COLOR = Color.INDIAN_RED
+const BASIC_DAMAGE_COLOR = Color.FLORAL_WHITE
 const PURE_DAMAGE_COLOR = Color.LIGHT_STEEL_BLUE
+const CRIT_DAMAGE_COLOR = Color.INDIAN_RED

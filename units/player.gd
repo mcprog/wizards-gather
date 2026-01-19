@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody2D
 
-@export_group("Nodes")
+@export_group("Components")
 @export var input_component: InputComponent
 @export var movement_component: MovementComponent
 @export var animation_component: AnimationComponent

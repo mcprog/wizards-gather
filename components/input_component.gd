@@ -8,6 +8,7 @@ var direction_x = 0.0
 var down_jump = false
 var jump = false
 
+var debug = false
 
 func handle_input():
 	if not clicked and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
@@ -23,6 +24,10 @@ func handle_input():
 	
 	if Input.is_action_just_pressed("escape"):
 		get_tree().change_scene_to_packed(Constants.MAIN_MENU)
+	
+	# Debug
+	debug = Input.is_action_just_pressed("debug")
+
 
 func spawn_cursor(cursor: WandCursor) -> bool:
 	if clicked:

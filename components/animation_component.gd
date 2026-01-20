@@ -12,11 +12,14 @@ func play_move_animation():
 func play_animation(animation: String):
 	sprite.play(animation)
 
-func handle_animation(direction_x: float, is_jumping: bool, is_on_floor):
+func handle_animation(direction_x: float, is_on_floor, vy: float):
 	if direction != direction_x:
 		direction = direction_x
 		sprite.flip_h = direction < 0
-	if is_jumping and not jumping:
-		sprite.play("jump")
 	if is_on_floor:
 		play_move_animation()
+	else:
+		if vy < 0:
+			sprite.play("jump")
+		else:
+			sprite.play("fall")

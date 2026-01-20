@@ -26,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	if position.y > Constants.BOTTOM_PLATFORM_PX:
 		input_component.down_jump = false
 	movement_component.handle_movement(self, input_component.direction_x, input_component.down_jump, input_component.jump)
-	animation_component.handle_animation(input_component.direction_x, movement_component.is_jumping, is_on_floor())
+	animation_component.handle_animation(input_component.direction_x, is_on_floor(), velocity.y)
 	
 	move_and_slide()
 	

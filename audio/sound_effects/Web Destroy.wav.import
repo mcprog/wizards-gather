@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://djbf5ni3gk1j"
+path="res://.godot/imported/Web Destroy.wav-6f2d1f300a696dceb8a4526ba521d608.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/Web Destroy.wav"
+dest_files=["res://.godot/imported/Web Destroy.wav-6f2d1f300a696dceb8a4526ba521d608.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

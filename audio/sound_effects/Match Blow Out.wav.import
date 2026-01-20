@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b6qq0xir7rou4"
+path="res://.godot/imported/Match Blow Out.wav-6e89410622f36064204954cc2d00cd0a.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/Match Blow Out.wav"
+dest_files=["res://.godot/imported/Match Blow Out.wav-6e89410622f36064204954cc2d00cd0a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

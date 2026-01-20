@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://biw8hm218b6xb"
+path="res://.godot/imported/Projectile Throw.wav-26c22b07f86da9399cfda6b8212625dd.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/Projectile Throw.wav"
+dest_files=["res://.godot/imported/Projectile Throw.wav-26c22b07f86da9399cfda6b8212625dd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

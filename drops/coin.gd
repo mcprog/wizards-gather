@@ -2,6 +2,7 @@ class_name Coin extends Node2D
 
 @export_subgroup("Nodes")
 @export var pickup_component: PickupComponent
+@export var sound_effect_component: SoundEffectComponent
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
@@ -11,5 +12,8 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if pickup_component.can_pickup:
-		queue_free()
-		# TODO add acutal pickup effects
+		sound_effect_component.play()
+
+
+func _on_sound_effect_component_sound_finished() -> void:
+	queue_free()

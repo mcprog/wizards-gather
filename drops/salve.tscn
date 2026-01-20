@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://blsbnodk2cg40"]
+
+[ext_resource type="Script" uid="uid://cha0cw6fe80l" path="res://drops/salve.gd" id="1_2pgyr"]
+[ext_resource type="SpriteFrames" uid="uid://d2h2xquxhl542" path="res://textures/drops/health.tres" id="1_u46q6"]
+[ext_resource type="PackedScene" uid="uid://brahohsq61aed" path="res://components/pickup_component.tscn" id="2_wg2w3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2pgyr"]
+
+[node name="Salve" type="Node2D" node_paths=PackedStringArray("pickup_component")]
+script = ExtResource("1_2pgyr")
+pickup_component = NodePath("PickupComponent")
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_u46q6")
+animation = &"red_health"
+
+[node name="PickupComponent" parent="." instance=ExtResource("2_wg2w3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickupComponent"]
+shape = SubResource("RectangleShape2D_2pgyr")

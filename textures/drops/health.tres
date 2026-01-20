@@ -1,0 +1,42 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://d2h2xquxhl542"]
+
+[ext_resource type="Texture2D" uid="uid://bjs8517eku7oq" path="res://textures/drops/health_bullets.png" id="1_4l75h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xwt81"]
+atlas = ExtResource("1_4l75h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkvx8"]
+atlas = ExtResource("1_4l75h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0d1h8"]
+atlas = ExtResource("1_4l75h")
+region = Rect2(0, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xwt81")
+}],
+"loop": false,
+"name": &"armor",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkvx8")
+}],
+"loop": false,
+"name": &"green_health",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0d1h8")
+}],
+"loop": false,
+"name": &"red_health",
+"speed": 5.0
+}]

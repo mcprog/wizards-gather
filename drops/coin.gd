@@ -12,8 +12,5 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if pickup_component.can_pickup:
-		sound_effect_component.play()
-
-
-func _on_sound_effect_component_sound_finished() -> void:
-	queue_free()
+		SoundManager.play_coin_pickup()
+		queue_free()

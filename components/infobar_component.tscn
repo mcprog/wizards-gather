@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://dphxai0c4llji"]
+
+[ext_resource type="Script" uid="uid://c61qvhj1fbqn5" path="res://components/infobar_component.gd" id="1_0puac"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0puac"]
+bg_color = Color(0.16206548, 0.16206563, 0.16206554, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_size = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d7ueg"]
+bg_color = Color(0.2102496, 0.64615375, 0.34184307, 1)
+border_width_right = 4
+border_color = Color(0.17291921, 0.53134847, 0.27816063, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ube6"]
+bg_color = Color(0.08138197, 0.49204987, 0.673811, 1)
+border_width_right = 4
+border_color = Color(0.03821791, 0.32529578, 0.45428658, 1)
+
+[node name="InfobarComponent" type="Node2D"]
+script = ExtResource("1_0puac")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -39.0
+offset_right = 30.0
+offset_bottom = -30.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0puac")
+theme_override_styles/fill = SubResource("StyleBoxFlat_d7ueg")
+value = 50.0
+show_percentage = false
+
+[node name="ManaBar" type="ProgressBar" parent="."]
+offset_left = -30.0
+offset_top = -30.0
+offset_right = 30.0
+offset_bottom = -25.0
+theme_override_styles/background = SubResource("StyleBoxFlat_0puac")
+theme_override_styles/fill = SubResource("StyleBoxFlat_1ube6")
+value = 50.0
+show_percentage = false

@@ -1,7 +1,8 @@
 class_name MovementComponent extends Node2D
 
+
 @export_subgroup("Settings")
-@export var speed: float = 100.0
+@export var speed: float = 200.0
 @export var jump_velocity: float = -750.0
 
 var is_jumping: bool = false

@@ -6,7 +6,7 @@
 [ext_resource type="SpriteFrames" uid="uid://drwrcnun1x3dn" path="res://textures/goblin.tres" id="4_3aehx"]
 [ext_resource type="PackedScene" uid="uid://cnm3b8mo6q2lo" path="res://components/health_component.tscn" id="4_fildd"]
 
-[node name="ExampleEnemy" type="Node2D" node_paths=PackedStringArray("animation_component", "attack_component", "health_component")]
+[node name="ExampleEnemy" type="Node2D" node_paths=PackedStringArray("animation_component", "attack_component", "health_component") groups=["enemy"]]
 script = ExtResource("1_vu410")
 animation_component = NodePath("AnimationComponent")
 attack_component = NodePath("AttackComponent")

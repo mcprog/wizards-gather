@@ -1,7 +1,7 @@
 class_name ExampleEnemy extends Node2D
 
 
-@export_subgroup("Nodes")
+@export_subgroup("Components")
 @export var animation_component: AnimationComponent
 @export var attack_component: AttackComponent
 @export var health_component: HealthComponent

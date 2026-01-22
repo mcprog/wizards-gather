@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://yu1c8v3qgvuj"]
+[gd_scene load_steps=6 format=3 uid="uid://yu1c8v3qgvuj"]
 
 [ext_resource type="Script" uid="uid://bxivrbj6tcc6f" path="res://units/mage/mage_unit.gd" id="1_m20bd"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="3_i0d24"]
@@ -7,10 +7,6 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0chn"]
 radius = 134.09325
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0chn"]
-radius = 7.0
-height = 24.0
 
 [node name="MageUnit" type="Area2D" node_paths=PackedStringArray("animation_component", "attack_component")]
 collision_layer = 2
@@ -22,10 +18,7 @@ attack_component = NodePath("AttackComponent")
 [node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_i0d24")]
 sprite = NodePath("../Sprite")
 
-[node name="AttackComponent" parent="." node_paths=PackedStringArray("shape") instance=ExtResource("3_p0chn")]
-collision_layer = 4
-collision_mask = 8
-shape = NodePath("CollisionShape2D")
+[node name="AttackComponent" parent="." instance=ExtResource("3_p0chn")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
 shape = SubResource("CircleShape2D_p0chn")
@@ -37,6 +30,3 @@ animation = &"run"
 frame_progress = 0.30322576
 
 [node name="AttackTimer" type="Timer" parent="."]
-
-[node name="Hurtbox" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_p0chn")

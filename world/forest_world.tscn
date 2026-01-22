@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://cd3am5taonrbv"]
+[gd_scene load_steps=13 format=4 uid="uid://cd3am5taonrbv"]
 
 [ext_resource type="TileSet" uid="uid://bnl2n8x8bse03" path="res://textures/forest_tiles.tres" id="1_4hwon"]
 [ext_resource type="PackedScene" uid="uid://ctlwgv5um3e6" path="res://components/scrolling_component.tscn" id="2_4ki4l"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://blbnr0em0gux2" path="res://textures/world/decor/Rock/rock_2.png" id="9_vt4bg"]
 [ext_resource type="PackedScene" uid="uid://bsrlom7pude8w" path="res://drops/coin.tscn" id="10_vt4bg"]
 [ext_resource type="PackedScene" uid="uid://blsbnodk2cg40" path="res://drops/salve.tscn" id="11_6yles"]
+[ext_resource type="PackedScene" uid="uid://3sqik23p6ong" path="res://enemies/goblin_enemy.tscn" id="12_oyh0b"]
 
 [node name="ForestWorld" type="Node2D"]
 
@@ -400,3 +401,30 @@ position = Vector2(1563.5, 13)
 
 [node name="Salve4" parent="Salves" instance=ExtResource("11_6yles")]
 position = Vector2(2169, 276.5)
+
+[node name="Enemies" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="GoblinEnemy1" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(459, 260)
+
+[node name="GoblinEnemy2" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(1155, 259.5)
+
+[node name="GoblinEnemy3" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(1936.5, 257)
+
+[node name="GoblinEnemy4" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(1785.5, 36)
+
+[node name="GoblinEnemy5" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(2410.5, 68.5)
+
+[node name="GoblinEnemy6" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(1227.5, 37.5)
+
+[node name="GoblinEnemy7" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(2550.5, 260)
+
+[node name="GoblinEnemy8" parent="Enemies" instance=ExtResource("12_oyh0b")]
+position = Vector2(2437.5, 260.5)

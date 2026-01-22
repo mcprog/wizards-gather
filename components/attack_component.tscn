@@ -1,14 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ecoqexfwkev3"]
+[gd_scene load_steps=2 format=3 uid="uid://ecoqexfwkev3"]
 
 [ext_resource type="Script" uid="uid://btnrsu3ayd47c" path="res://components/attack_component.gd" id="1_5e5ew"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_5e5ew"]
-radius = 450.0
-
-[node name="AttackComponent" type="Node2D"]
+[node name="AttackComponent" type="Area2D"]
 script = ExtResource("1_5e5ew")
-
-[node name="RangeArea" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RangeArea"]
-shape = SubResource("CircleShape2D_5e5ew")

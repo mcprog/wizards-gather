@@ -1,8 +1,4 @@
-class_name AttackComponent extends Node2D
-
-
-@onready var range_area: Area2D = $RangeArea
-@onready var range_area_collider: CircleShape2D = $RangeArea/CollisionShape2D.shape
+class_name AttackComponent extends Area2D
 
 @export_subgroup("Stats", "ac")
 @export var damage : float
@@ -16,6 +12,9 @@ class_name AttackComponent extends Node2D
 @export var attack_speed : float
 @export var mana_regen : float
 
+@export_subgroup("Nodes", "ac")
+@export var shape: CollisionShape2D
+
 var has_max_mana: bool = false
 ## Targeting variables
 var has_target: bool = false
@@ -25,7 +24,7 @@ var rng = RandomNumberGenerator.new()
 
 
 ## Prepare the component statistics for the unit. This must be called on the unit's _ready()
-func prepare(dam: float, crit_c: float, crit_d: float, mana: float, attacks_per_second: float, mana_per_second: float, range_in: float) -> void:
+func prepare(dam: float, crit_c: float, crit_d: float, mana: float, attacks_per_second: float, mana_per_second: float) -> void:
 	self.damage = dam
 	self.crit_chance = crit_c
 	self.crit_damage = crit_d
@@ -33,12 +32,7 @@ func prepare(dam: float, crit_c: float, crit_d: float, mana: float, attacks_per_
 	self.current_mana = mana
 	self.attack_speed = attacks_per_second
 	self.mana_regen = mana_per_second
-	## Set range for unit
-	range_area_collider.radius = range_in
-
-
-func _ready() -> void:
-	pass # Replace with function body.
+	# range is now set up size of required collider
 
 
 func _process(delta: float) -> void:
@@ -81,7 +75,7 @@ func reset_manabar() -> void:
 
 
 func select_target() -> Node2D:
-	for area in range_area.get_overlapping_areas():
-		if area.owner.is_in_group("enemy") and area.is_in_group("hurtbox"):
+	for area in get_overlapping_areas():
+		if area.is_in_group("enemy") and area.is_in_group("hurtbox"):
 			return area.owner
 	return null

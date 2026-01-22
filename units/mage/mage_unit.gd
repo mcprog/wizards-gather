@@ -15,7 +15,7 @@ var is_attacking: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	animation_component.play_move_animation()
-	attack_component.prepare(15.0, 0.01, 1.75, 30.0, 0.8, 1.5, 400.0)
+	attack_component.prepare(15.0, 0.01, 1.75, 30.0, 0.8, 1.5)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

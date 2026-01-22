@@ -1,0 +1,51 @@
+[gd_scene load_steps=10 format=3 uid="uid://3sqik23p6ong"]
+
+[ext_resource type="Script" uid="uid://cf0xnr8llwl03" path="res://enemies/goblin_enemy.gd" id="1_j58pd"]
+[ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="2_jtbjf"]
+[ext_resource type="PackedScene" uid="uid://ecoqexfwkev3" path="res://components/attack_component.tscn" id="3_3sse3"]
+[ext_resource type="PackedScene" uid="uid://cnm3b8mo6q2lo" path="res://components/health_component.tscn" id="4_py6py"]
+[ext_resource type="PackedScene" uid="uid://dphxai0c4llji" path="res://components/infobar_component.tscn" id="5_0kuod"]
+[ext_resource type="PackedScene" uid="uid://d0eppyni6jg6m" path="res://components/gravity_component.tscn" id="6_jtbjf"]
+[ext_resource type="SpriteFrames" uid="uid://drwrcnun1x3dn" path="res://textures/goblin.tres" id="6_jx2n1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jtbjf"]
+radius = 126.14278
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x02xl"]
+radius = 12.0
+
+[node name="GoblinEnemy" type="CharacterBody2D" node_paths=PackedStringArray("animation_component", "attack_component", "health_component", "infobar_component", "gravity_component") groups=["enemy"]]
+collision_layer = 8
+collision_mask = 7
+script = ExtResource("1_j58pd")
+animation_component = NodePath("AnimationComponent")
+attack_component = NodePath("AttackComponent")
+health_component = NodePath("HealthComponent")
+infobar_component = NodePath("InfobarComponent")
+gravity_component = NodePath("GravityComponent")
+
+[node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_jtbjf")]
+sprite = NodePath("../Sprite")
+
+[node name="AttackComponent" parent="." node_paths=PackedStringArray("shape") instance=ExtResource("3_3sse3")]
+collision_layer = 16
+collision_mask = 2
+shape = NodePath("CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
+shape = SubResource("CircleShape2D_jtbjf")
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_py6py")]
+
+[node name="InfobarComponent" parent="." instance=ExtResource("5_0kuod")]
+
+[node name="GravityComponent" parent="." instance=ExtResource("6_jtbjf")]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("6_jx2n1")
+animation = &"idle"
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hurtbox"]]
+position = Vector2(0, 11)
+shape = SubResource("CapsuleShape2D_x02xl")

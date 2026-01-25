@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5up1ysfrlr8v"]
+[gd_scene load_steps=10 format=3 uid="uid://b5up1ysfrlr8v"]
 
 [ext_resource type="SpriteFrames" uid="uid://crw5wcmmyjjmm" path="res://textures/flying_eye.tres" id="1_44e0q"]
 [ext_resource type="Script" uid="uid://crj1i1agu7hff" path="res://enemies/flying_eye_enemy.gd" id="1_nechm"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="1_tg71u"]
 [ext_resource type="PackedScene" uid="uid://ecoqexfwkev3" path="res://components/attack_component.tscn" id="2_2n6s7"]
 [ext_resource type="PackedScene" uid="uid://dphxai0c4llji" path="res://components/infobar_component.tscn" id="3_0mqci"]
+[ext_resource type="PackedScene" uid="uid://cnm3b8mo6q2lo" path="res://components/health_component.tscn" id="4_1t04h"]
 [ext_resource type="PackedScene" uid="uid://costx4vi10t43" path="res://components/bobbing_component.tscn" id="4_lb8gl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2n6s7"]
@@ -13,31 +14,34 @@ radius = 70.0
 [sub_resource type="CircleShape2D" id="CircleShape2D_nechm"]
 radius = 16.03122
 
-[node name="FlyingEyeEnemy" type="CharacterBody2D" node_paths=PackedStringArray("animation_component", "attack_component", "infobar_component", "bobbing_component")]
+[node name="FlyingEyeEnemy" type="CharacterBody2D" node_paths=PackedStringArray("animation_component", "attack_component", "health_component", "infobar_component", "bobbing_component")]
 collision_layer = 8
 collision_mask = 6
 script = ExtResource("1_nechm")
 animation_component = NodePath("AnimationComponent")
 attack_component = NodePath("AttackComponent")
+health_component = NodePath("HealthComponent")
 infobar_component = NodePath("InfobarComponent")
 bobbing_component = NodePath("BobbingComponent")
 
 [node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_tg71u")]
 sprite = NodePath("../Sprite")
 
+[node name="AttackComponent" parent="." node_paths=PackedStringArray("shape") instance=ExtResource("2_2n6s7")]
+collision_layer = 16
+collision_mask = 2
+shape = NodePath("Range")
+
+[node name="Range" type="CollisionShape2D" parent="AttackComponent"]
+shape = SubResource("CircleShape2D_2n6s7")
+
+[node name="HealthComponent" parent="." instance=ExtResource("4_1t04h")]
+
 [node name="InfobarComponent" parent="." instance=ExtResource("3_0mqci")]
 
 [node name="BobbingComponent" parent="." instance=ExtResource("4_lb8gl")]
 amplitude = 25.0
 speed = 2.0
-
-[node name="AttackComponent" parent="." node_paths=PackedStringArray("shape") instance=ExtResource("2_2n6s7")]
-collision_layer = 16
-collision_mask = 2
-shape = NodePath("CollisionShape2D")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
-shape = SubResource("CircleShape2D_2n6s7")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("1_44e0q")

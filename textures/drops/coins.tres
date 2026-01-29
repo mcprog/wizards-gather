@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=23 format=3 uid="uid://eflygxfyx8et"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://eflygxfyx8et"]
 
 [ext_resource type="Texture2D" uid="uid://shlq4tyc4j0t" path="res://textures/drops/coins18x18.png" id="1_we1oh"]
 

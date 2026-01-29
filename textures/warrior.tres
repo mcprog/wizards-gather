@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=30 format=3 uid="uid://cgghydl16clso"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://cgghydl16clso"]
 
 [ext_resource type="Texture2D" uid="uid://dn0jd63lj3ka1" path="res://textures/warrior/Idle.png" id="1_g1exk"]
 [ext_resource type="Texture2D" uid="uid://fswwxvo7uss0" path="res://textures/warrior/Fall.png" id="1_xmk33"]

@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://d2h2xquxhl542"]
+[gd_resource type="SpriteFrames" format=3 uid="uid://d2h2xquxhl542"]
 
 [ext_resource type="Texture2D" uid="uid://bjs8517eku7oq" path="res://textures/drops/health_bullets.png" id="1_4l75h"]
 

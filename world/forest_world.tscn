@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cd3am5taonrbv"]
+[gd_scene format=4 uid="uid://cd3am5taonrbv"]
 
 [ext_resource type="TileSet" uid="uid://bnl2n8x8bse03" path="res://textures/forest_tiles.tres" id="1_4hwon"]
 [ext_resource type="PackedScene" uid="uid://ctlwgv5um3e6" path="res://components/scrolling_component.tscn" id="2_4ki4l"]
@@ -14,433 +14,433 @@
 [ext_resource type="PackedScene" uid="uid://b5up1ysfrlr8v" path="res://enemies/flying_eye_enemy.tscn" id="12_k8swu"]
 [ext_resource type="PackedScene" uid="uid://3sqik23p6ong" path="res://enemies/goblin_enemy.tscn" id="12_oyh0b"]
 
-[node name="ForestWorld" type="Node2D"]
+[node name="ForestWorld" type="Node2D" unique_id=1747731290]
 
-[node name="Trees" type="Node2D" parent="."]
+[node name="Trees" type="Node2D" parent="." unique_id=151638677]
 scale = Vector2(4, 4)
 
-[node name="Tree1" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree1" parent="Trees" unique_id=983318875 instance=ExtResource("3_i5fku")]
 position = Vector2(31.5, 89)
 texture = ExtResource("6_s2vp6")
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree7" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree7" parent="Trees" unique_id=1580130745 instance=ExtResource("3_i5fku")]
 position = Vector2(142.25, 87.75)
 texture = ExtResource("7_3ijxg")
 type = 1
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree8" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree8" parent="Trees" unique_id=2096319423 instance=ExtResource("3_i5fku")]
 position = Vector2(518.5, 88.75)
 texture = ExtResource("7_3ijxg")
 type = 1
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree9" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree9" parent="Trees" unique_id=1102516992 instance=ExtResource("3_i5fku")]
 position = Vector2(1023.75, 88.25)
 texture = ExtResource("7_3ijxg")
 type = 1
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree2" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree2" parent="Trees" unique_id=677102726 instance=ExtResource("3_i5fku")]
 position = Vector2(246.75, 88)
 texture = ExtResource("6_s2vp6")
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree3" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree3" parent="Trees" unique_id=580538551 instance=ExtResource("3_i5fku")]
 position = Vector2(391.25, 88.5)
 texture = ExtResource("6_s2vp6")
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree4" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree4" parent="Trees" unique_id=913152975 instance=ExtResource("3_i5fku")]
 position = Vector2(590, 87.5)
 texture = ExtResource("6_s2vp6")
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree5" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree5" parent="Trees" unique_id=911057909 instance=ExtResource("3_i5fku")]
 position = Vector2(785, 87.75)
 texture = ExtResource("6_s2vp6")
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Tree6" parent="Trees" instance=ExtResource("3_i5fku")]
+[node name="Tree6" parent="Trees" unique_id=392316652 instance=ExtResource("3_i5fku")]
 position = Vector2(1062.75, 88.5)
 texture = ExtResource("6_s2vp6")
 texture_a = ExtResource("6_s2vp6")
 texture_b = ExtResource("7_3ijxg")
 
-[node name="Ground" type="TileMapLayer" parent="."]
+[node name="Ground" type="TileMapLayer" parent="." unique_id=2015719204]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("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")
 tile_set = ExtResource("1_4hwon")
 
-[node name="Grass" type="TileMapLayer" parent="."]
+[node name="Grass" type="TileMapLayer" parent="." unique_id=146573250]
 scale = Vector2(4, 4)
 tile_map_data = PackedByteArray("AAABAAkAAAAAAAAAAAACAAkAAAAAAAAAAAADAAkAAAAAAAAAAAAEAAkAAAAAAAAAAAAFAAkAAAAAAAAAAAAGAAkAAAAAAAAAAAAHAAkAAAAAAAAAAAAIAAkAAAAAAAAAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAAAAAALAAkAAAAAAAAAAAAEAAYAAAAAAAAAAAAFAAYAAAAAAAAAAAAGAAYAAAAAAAAAAAAHAAYAAAAAAAAAAAAIAAYAAAAAAAAAAAAJAAYAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAMAAAAAAAAAAAAHAAMAAAAAAAAAAAAIAAMAAAAAAAAAAAAJAAMAAAAAAAAAAAAKAAMAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAAAAAANAAUAAAAAAAAAAAAOAAUAAAAAAAAAAAAPAAUAAAAAAAAAAAANAAIAAAAAAAAAAAAOAAIAAAAAAAAAAAAPAAIAAAAAAAAAAAASAAEAAAAAAAAAAAATAAEAAAAAAAAAAAAUAAEAAAAAAAAAAAAVAAEAAAAAAAAAAAAYAAIAAAAAAAAAAAAZAAIAAAAAAAAAAAAaAAIAAAAAAAAAAAAbAAIAAAAAAAAAAAAcAAIAAAAAAAAAAAAUAAYAAAAAAAAAAAAZAAYAAAAAAAAAAAAaAAYAAAAAAAAAAAAcAAUAAAAAAAAAAAAdAAUAAAAAAAAAAAAeAAUAAAAAAAAAAAAYAAkAAAAAAAAAAAAZAAkAAAAAAAAAAAAaAAkAAAAAAAAAAAAbAAkAAAAAAAAAAAAcAAkAAAAAAAAAAAAdAAkAAAAAAAAAAAAeAAkAAAAAAAAAAAAfAAkAAAAAAAAAAAAgAAkAAAAAAAAAAAAhAAkAAAAAAAAAAAAiAAkAAAAAAAAAAAAjAAkAAAAAAAAAAAAkAAkAAAAAAAAAAAAlAAkAAAAAAAAAAAAlAAYAAAAAAAAAAAAmAAYAAAAAAAAAAAAnAAYAAAAAAAAAAAApAAUAAAAAAAAAAAAqAAUAAAAAAAAAAAArAAUAAAAAAAAAAAAsAAUAAAAAAAAAAAAmAAIAAAAAAAAAAAAnAAIAAAAAAAAAAAAoAAIAAAAAAAAAAAAfAAEAAAAAAAAAAAAgAAEAAAAAAAAAAAAhAAEAAAAAAAAAAAAiAAEAAAAAAAAAAAAtAAEAAAAAAAAAAAAuAAEAAAAAAAAAAAAvAAEAAAAAAAAAAAAwAAEAAAAAAAAAAAAxAAEAAAAAAAAAAAAyAAEAAAAAAAAAAAAvAAkAAAAAAAAAAAAwAAkAAAAAAAAAAAAxAAkAAAAAAAAAAAAyAAkAAAAAAAAAAAAzAAkAAAAAAAAAAAA0AAkAAAAAAAAAAAA1AAkAAAAAAAAAAAA2AAkAAAAAAAAAAAA3AAkAAAAAAAAAAAA4AAkAAAAAAAAAAAA5AAkAAAAAAAAAAAA6AAkAAAAAAAAAAAA7AAkAAAAAAAAAAAA8AAkAAAAAAAAAAAA9AAkAAAAAAAAAAAA+AAkAAAAAAAAAAAA/AAkAAAAAAAAAAABAAAkAAAAAAAAAAABBAAkAAAAAAAAAAABCAAkAAAAAAAAAAABDAAkAAAAAAAAAAABEAAkAAAAAAAAAAABFAAkAAAAAAAAAAABGAAkAAAAAAAAAAABHAAkAAAAAAAAAAABIAAkAAAAAAAAAAABJAAkAAAAAAAAAAABKAAkAAAAAAAAAAABLAAkAAAAAAAAAAABMAAkAAAAAAAAAAABNAAkAAAAAAAAAAABOAAkAAAAAAAAAAABPAAkAAAAAAAAAAABNAAUAAAAAAAAAAABOAAUAAAAAAAAAAABPAAUAAAAAAAAAAABJAAMAAAAAAAAAAABKAAMAAAAAAAAAAABLAAMAAAAAAAAAAABMAAMAAAAAAAAAAABOAAEAAAAAAAAAAABPAAEAAAAAAAAAAABDAAIAAAAAAAAAAABEAAIAAAAAAAAAAABFAAIAAAAAAAAAAABGAAIAAAAAAAAAAABHAAUAAAAAAAAAAABGAAUAAAAAAAAAAABFAAUAAAAAAAAAAABEAAUAAAAAAAAAAABJAAYAAAAAAAAAAABAAAEAAAAAAAAAAAA/AAEAAAAAAAAAAAA+AAEAAAAAAAAAAAA9AAEAAAAAAAAAAAA/AAYAAAAAAAAAAAA+AAYAAAAAAAAAAAA9AAYAAAAAAAAAAAA8AAYAAAAAAAAAAAA7AAYAAAAAAAAAAAA6AAYAAAAAAAAAAAA5AAYAAAAAAAAAAAA0AAUAAAAAAAAAAAA1AAUAAAAAAAAAAAA2AAUAAAAAAAAAAAA1AAIAAAAAAAAAAAA2AAIAAAAAAAAAAAA3AAIAAAAAAAAAAAA4AAIAAAAAAAAAAAA3AAUAAQAAAAAAAABAAAYAAQAAAAAAAABBAAEAAQAAAAAAAABHAAIAAQAAAAAAAABIAAUAAQAAAAAAAABKAAYAAQAAAAAAAABQAAUAAQAAAAAAAABQAAkAAQAAAAAAAABNAAMAAQAAAAAAAABQAAEAAQAAAAAAAAA5AAIAAQAAAAAAAAAzAAEAAQAAAAAAAAAtAAUAAQAAAAAAAAAoAAYAAQAAAAAAAAApAAIAAQAAAAAAAAAjAAEAAQAAAAAAAAAmAAkAAQAAAAAAAAAfAAUAAQAAAAAAAAAdAAIAAQAAAAAAAAAWAAEAAQAAAAAAAAAXAAUAAQAAAAAAAAAVAAYAAQAAAAAAAAAQAAUAAQAAAAAAAAAQAAIAAQAAAAAAAAALAAMAAQAAAAAAAAAKAAYAAQAAAAAAAAADAAIAAQAAAAAAAAAAAAkAAgAAAAAAAAADAAYAAgAAAAAAAAAAAAIAAgAAAAAAAAAEAAMAAgAAAAAAAAAMAAUAAgAAAAAAAAAMAAIAAgAAAAAAAAATAAYAAgAAAAAAAAARAAEAAgAAAAAAAAAWAAUAAgAAAAAAAAAXAAIAAgAAAAAAAAAYAAYAAgAAAAAAAAAbAAUAAgAAAAAAAAAeAAEAAgAAAAAAAAAlAAIAAgAAAAAAAAAkAAYAAgAAAAAAAAAoAAUAAgAAAAAAAAAsAAEAAgAAAAAAAAAzAAUAAgAAAAAAAAA0AAIAAgAAAAAAAAA4AAYAAgAAAAAAAAA8AAEAAgAAAAAAAABCAAIAAgAAAAAAAABDAAUAAgAAAAAAAABIAAMAAgAAAAAAAABIAAYAAgAAAAAAAABMAAUAAgAAAAAAAABNAAEAAgAAAAAAAAAuAAkABAAAAAAAAAAXAAkABAAAAAAAAAAMAAkAAwAAAAAAAAAbAAYAAQAAAAAAAAA=")
 tile_set = ExtResource("1_4hwon")
 
-[node name="ScrollingComponent" parent="." node_paths=PackedStringArray("target") instance=ExtResource("2_4ki4l")]
+[node name="ScrollingComponent" parent="." unique_id=1805761158 node_paths=PackedStringArray("target") instance=ExtResource("2_4ki4l")]
 target = NodePath("..")
 
-[node name="Bushes" type="Node2D" parent="."]
+[node name="Bushes" type="Node2D" parent="." unique_id=895621321]
 scale = Vector2(4, 4)
 
-[node name="Bush1" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush1" parent="Bushes" unique_id=842281712 instance=ExtResource("3_i5fku")]
 position = Vector2(100.75, 32.25)
 texture = ExtResource("4_lp1vh")
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush7" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush7" parent="Bushes" unique_id=2100446366 instance=ExtResource("3_i5fku")]
 position = Vector2(207.75, 16.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush8" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush8" parent="Bushes" unique_id=857438850 instance=ExtResource("3_i5fku")]
 position = Vector2(161.25, 129.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush9" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush9" parent="Bushes" unique_id=1628667194 instance=ExtResource("3_i5fku")]
 position = Vector2(316.75, 80.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush10" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush10" parent="Bushes" unique_id=667270971 instance=ExtResource("3_i5fku")]
 position = Vector2(501.25, 0)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush11" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush11" parent="Bushes" unique_id=339654998 instance=ExtResource("3_i5fku")]
 position = Vector2(562.75, 128.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush12" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush12" parent="Bushes" unique_id=431853399 instance=ExtResource("3_i5fku")]
 position = Vector2(831, 65.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush13" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush13" parent="Bushes" unique_id=1702050881 instance=ExtResource("3_i5fku")]
 position = Vector2(746.5, 128.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush14" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush14" parent="Bushes" unique_id=2056358577 instance=ExtResource("3_i5fku")]
 position = Vector2(1010.25, 80.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush15" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush15" parent="Bushes" unique_id=1148976472 instance=ExtResource("3_i5fku")]
 position = Vector2(1127.75, 64.5)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush16" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush16" parent="Bushes" unique_id=1931783720 instance=ExtResource("3_i5fku")]
 position = Vector2(1238.5, 129)
 texture = ExtResource("5_s2vp6")
 type = 1
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush2" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush2" parent="Bushes" unique_id=1131341738 instance=ExtResource("3_i5fku")]
 position = Vector2(198.75, 128.25)
 texture = ExtResource("4_lp1vh")
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush3" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush3" parent="Bushes" unique_id=630786519 instance=ExtResource("3_i5fku")]
 position = Vector2(431.25, 16.75)
 texture = ExtResource("4_lp1vh")
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush4" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush4" parent="Bushes" unique_id=1860232665 instance=ExtResource("3_i5fku")]
 position = Vector2(475, 127.5)
 texture = ExtResource("4_lp1vh")
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush5" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush5" parent="Bushes" unique_id=1487534033 instance=ExtResource("3_i5fku")]
 position = Vector2(712.75, 64.5)
 texture = ExtResource("4_lp1vh")
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Bush6" parent="Bushes" instance=ExtResource("3_i5fku")]
+[node name="Bush6" parent="Bushes" unique_id=301415167 instance=ExtResource("3_i5fku")]
 position = Vector2(974, 127.75)
 texture = ExtResource("4_lp1vh")
 texture_a = ExtResource("4_lp1vh")
 texture_b = ExtResource("5_s2vp6")
 
-[node name="Rocks" type="Node2D" parent="."]
+[node name="Rocks" type="Node2D" parent="." unique_id=1298465313]
 scale = Vector2(4, 4)
 
-[node name="Rock1" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock1" parent="Rocks" unique_id=1597270281 instance=ExtResource("3_i5fku")]
 position = Vector2(70, 127.75)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock11" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock11" parent="Rocks" unique_id=206234836 instance=ExtResource("3_i5fku")]
 position = Vector2(146, 79.75)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock12" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock12" parent="Rocks" unique_id=1816025198 instance=ExtResource("3_i5fku")]
 position = Vector2(234.75, 64.25)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock13" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock13" parent="Rocks" unique_id=1169462776 instance=ExtResource("3_i5fku")]
 position = Vector2(357.5, 128.5)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock14" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock14" parent="Rocks" unique_id=1526977975 instance=ExtResource("3_i5fku")]
 position = Vector2(443.5, 64)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock15" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock15" parent="Rocks" unique_id=1538666715 instance=ExtResource("3_i5fku")]
 position = Vector2(624, 79.25)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock16" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock16" parent="Rocks" unique_id=1891242570 instance=ExtResource("3_i5fku")]
 position = Vector2(720.25, 0.5)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock17" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock17" parent="Rocks" unique_id=1226231542 instance=ExtResource("3_i5fku")]
 position = Vector2(807.5, 0.5)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock18" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock18" parent="Rocks" unique_id=1811885694 instance=ExtResource("3_i5fku")]
 position = Vector2(793.25, 128)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock19" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock19" parent="Rocks" unique_id=223254851 instance=ExtResource("3_i5fku")]
 position = Vector2(1055.25, 127.75)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock20" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock20" parent="Rocks" unique_id=536308761 instance=ExtResource("3_i5fku")]
 position = Vector2(1180.5, 79.5)
 texture = ExtResource("9_vt4bg")
 type = 1
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock2" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock2" parent="Rocks" unique_id=1378065576 instance=ExtResource("3_i5fku")]
 position = Vector2(128.5, 80)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock3" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock3" parent="Rocks" unique_id=1723215542 instance=ExtResource("3_i5fku")]
 position = Vector2(345.75, 128.5)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock4" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock4" parent="Rocks" unique_id=1553645344 instance=ExtResource("3_i5fku")]
 position = Vector2(492.25, 64.25)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock5" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock5" parent="Rocks" unique_id=908462764 instance=ExtResource("3_i5fku")]
 position = Vector2(650, 16.25)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock6" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock6" parent="Rocks" unique_id=722975846 instance=ExtResource("3_i5fku")]
 position = Vector2(849.75, 16.5)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock7" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock7" parent="Rocks" unique_id=1921928816 instance=ExtResource("3_i5fku")]
 position = Vector2(914.75, 79.5)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock8" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock8" parent="Rocks" unique_id=1312123455 instance=ExtResource("3_i5fku")]
 position = Vector2(1032.5, 128.5)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock9" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock9" parent="Rocks" unique_id=3604636 instance=ExtResource("3_i5fku")]
 position = Vector2(1080.75, 16)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Rock10" parent="Rocks" instance=ExtResource("3_i5fku")]
+[node name="Rock10" parent="Rocks" unique_id=1993596961 instance=ExtResource("3_i5fku")]
 position = Vector2(1235.75, 64.25)
 texture = ExtResource("8_hr7ls")
 texture_a = ExtResource("8_hr7ls")
 texture_b = ExtResource("9_vt4bg")
 
-[node name="Coins" type="Node2D" parent="."]
+[node name="Coins" type="Node2D" parent="." unique_id=89162657]
 scale = Vector2(2, 2)
 
-[node name="Coin1" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin1" parent="Coins" unique_id=543728511 instance=ExtResource("10_vt4bg")]
 position = Vector2(157.5, 180)
 
-[node name="Coin2" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin2" parent="Coins" unique_id=1149149346 instance=ExtResource("10_vt4bg")]
 position = Vector2(432.5, 279.5)
 
-[node name="Coin3" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin3" parent="Coins" unique_id=490632710 instance=ExtResource("10_vt4bg")]
 position = Vector2(516.5, 52.5)
 
-[node name="Coin4" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin4" parent="Coins" unique_id=156128274 instance=ExtResource("10_vt4bg")]
 position = Vector2(685.5, 182.5)
 
-[node name="Coin5" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin5" parent="Coins" unique_id=757841246 instance=ExtResource("10_vt4bg")]
 position = Vector2(800, 50)
 
-[node name="Coin6" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin6" parent="Coins" unique_id=380009086 instance=ExtResource("10_vt4bg")]
 position = Vector2(894, 49)
 
-[node name="Coin7" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin7" parent="Coins" unique_id=1184616901 instance=ExtResource("10_vt4bg")]
 position = Vector2(1070.5, 273.5)
 
-[node name="Coin8" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin8" parent="Coins" unique_id=1915391846 instance=ExtResource("10_vt4bg")]
 position = Vector2(1209, 273.5)
 
-[node name="Coin9" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin9" parent="Coins" unique_id=78979548 instance=ExtResource("10_vt4bg")]
 position = Vector2(1329, 147)
 
-[node name="Coin10" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin10" parent="Coins" unique_id=174258461 instance=ExtResource("10_vt4bg")]
 position = Vector2(1490, 20)
 
-[node name="Coin11" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin11" parent="Coins" unique_id=1591358642 instance=ExtResource("10_vt4bg")]
 position = Vector2(1725.5, 54)
 
-[node name="Coin12" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin12" parent="Coins" unique_id=852115836 instance=ExtResource("10_vt4bg")]
 position = Vector2(1624.5, 274.5)
 
-[node name="Coin13" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin13" parent="Coins" unique_id=2070994536 instance=ExtResource("10_vt4bg")]
 position = Vector2(1754.5, 260)
 
-[node name="Coin14" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin14" parent="Coins" unique_id=73596459 instance=ExtResource("10_vt4bg")]
 position = Vector2(1892.5, 180)
 
-[node name="Coin15" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin15" parent="Coins" unique_id=1634256845 instance=ExtResource("10_vt4bg")]
 position = Vector2(2055, 179.5)
 
-[node name="Coin16" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin16" parent="Coins" unique_id=645748931 instance=ExtResource("10_vt4bg")]
 position = Vector2(2211.5, 146)
 
-[node name="Coin17" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin17" parent="Coins" unique_id=566926514 instance=ExtResource("10_vt4bg")]
 position = Vector2(2355, 276)
 
-[node name="Coin18" parent="Coins" instance=ExtResource("10_vt4bg")]
+[node name="Coin18" parent="Coins" unique_id=1860436531 instance=ExtResource("10_vt4bg")]
 position = Vector2(2504, 148)
 
-[node name="Salves" type="Node2D" parent="."]
+[node name="Salves" type="Node2D" parent="." unique_id=325439883]
 scale = Vector2(2, 2)
 
-[node name="Salve1" parent="Salves" instance=ExtResource("11_6yles")]
+[node name="Salve1" parent="Salves" unique_id=604906089 instance=ExtResource("11_6yles")]
 position = Vector2(278, 82.5)
 
-[node name="Salve2" parent="Salves" instance=ExtResource("11_6yles")]
+[node name="Salve2" parent="Salves" unique_id=1875401341 instance=ExtResource("11_6yles")]
 position = Vector2(879.5, 268)
 
-[node name="Salve3" parent="Salves" instance=ExtResource("11_6yles")]
+[node name="Salve3" parent="Salves" unique_id=256207072 instance=ExtResource("11_6yles")]
 position = Vector2(1563.5, 13)
 
-[node name="Salve4" parent="Salves" instance=ExtResource("11_6yles")]
+[node name="Salve4" parent="Salves" unique_id=554315855 instance=ExtResource("11_6yles")]
 position = Vector2(2169, 276.5)
 
-[node name="Enemies" type="Node2D" parent="."]
+[node name="Enemies" type="Node2D" parent="." unique_id=1144399680]
 scale = Vector2(2, 2)
 
-[node name="FlyingEyeEnemy1" parent="Enemies" instance=ExtResource("12_k8swu")]
+[node name="FlyingEyeEnemy1" parent="Enemies" unique_id=1529115902 instance=ExtResource("12_k8swu")]
 position = Vector2(213, 164)
 
-[node name="FlyingEyeEnemy2" parent="Enemies" instance=ExtResource("12_k8swu")]
+[node name="FlyingEyeEnemy2" parent="Enemies" unique_id=2022782731 instance=ExtResource("12_k8swu")]
 position = Vector2(656.5, 123)
 
-[node name="FlyingEyeEnemy3" parent="Enemies" instance=ExtResource("12_k8swu")]
+[node name="FlyingEyeEnemy3" parent="Enemies" unique_id=1771082646 instance=ExtResource("12_k8swu")]
 position = Vector2(835, 257)
 
-[node name="FlyingEyeEnemy4" parent="Enemies" instance=ExtResource("12_k8swu")]
+[node name="FlyingEyeEnemy4" parent="Enemies" unique_id=1383722632 instance=ExtResource("12_k8swu")]
 position = Vector2(1061, 117)
 
-[node name="FlyingEyeEnemy5" parent="Enemies" instance=ExtResource("12_k8swu")]
+[node name="FlyingEyeEnemy5" parent="Enemies" unique_id=13688847 instance=ExtResource("12_k8swu")]
 position = Vector2(1458, 249.5)
 
-[node name="GoblinEnemy1" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy1" parent="Enemies" unique_id=1591069592 instance=ExtResource("12_oyh0b")]
 position = Vector2(459, 260)
 
-[node name="GoblinEnemy2" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy2" parent="Enemies" unique_id=1207871684 instance=ExtResource("12_oyh0b")]
 position = Vector2(1155, 259.5)
 
-[node name="GoblinEnemy3" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy3" parent="Enemies" unique_id=901071358 instance=ExtResource("12_oyh0b")]
 position = Vector2(1936.5, 257)
 
-[node name="GoblinEnemy4" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy4" parent="Enemies" unique_id=1183447048 instance=ExtResource("12_oyh0b")]
 position = Vector2(1785.5, 36)
 
-[node name="GoblinEnemy5" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy5" parent="Enemies" unique_id=1280458143 instance=ExtResource("12_oyh0b")]
 position = Vector2(2410.5, 68.5)
 
-[node name="GoblinEnemy6" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy6" parent="Enemies" unique_id=1699249288 instance=ExtResource("12_oyh0b")]
 position = Vector2(1227.5, 37.5)
 
-[node name="GoblinEnemy7" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy7" parent="Enemies" unique_id=48741821 instance=ExtResource("12_oyh0b")]
 position = Vector2(2550.5, 260)
 
-[node name="GoblinEnemy8" parent="Enemies" instance=ExtResource("12_oyh0b")]
+[node name="GoblinEnemy8" parent="Enemies" unique_id=2123223307 instance=ExtResource("12_oyh0b")]
 position = Vector2(2437.5, 260.5)

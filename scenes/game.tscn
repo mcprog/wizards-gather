@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://8tscax6joyre"]
+[gd_scene format=3 uid="uid://8tscax6joyre"]
 
 [ext_resource type="Script" uid="uid://c2dguh8bubjo1" path="res://scenes/game.gd" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://yu1c8v3qgvuj" path="res://units/mage/mage_unit.tscn" id="2_iywne"]
@@ -6,21 +6,29 @@
 [ext_resource type="PackedScene" uid="uid://cd3am5taonrbv" path="res://world/forest_world.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://cs0802lhhv4fd" path="res://units/player.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://byloe5551kk4q" path="res://units/unit_holder.tscn" id="6_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://dchdn868wr3tv" path="res://components/music_component.tscn" id="7_0tnpc"]
+[ext_resource type="AudioStream" uid="uid://tj4thhxr12vq" path="res://audio/music/sunixmuz-beauty-night.mp3" id="8_vtaks"]
+[ext_resource type="AudioStream" uid="uid://di7wkwxdwy6uj" path="res://audio/music/sunixmuz-fountain-of-life.mp3" id="9_kvpfn"]
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" unique_id=1143854297]
 script = ExtResource("1_yqjtg")
 starter_units = Array[PackedScene]([ExtResource("2_iywne")])
 
-[node name="ForestBackground" parent="." instance=ExtResource("3_p57ef")]
+[node name="ForestBackground" parent="." unique_id=1948942867 instance=ExtResource("3_p57ef")]
 
-[node name="ForestWorld" parent="." instance=ExtResource("5_iywne")]
+[node name="ForestWorld" parent="." unique_id=1510716198 instance=ExtResource("5_iywne")]
 
-[node name="Player" parent="." instance=ExtResource("6_p57ef")]
+[node name="Player" parent="." unique_id=1274736710 instance=ExtResource("6_p57ef")]
 position = Vector2(301, 196)
 
-[node name="UnitHolder" parent="." node_paths=PackedStringArray("player") instance=ExtResource("6_u5sy4")]
+[node name="UnitHolder" parent="." unique_id=374026229 node_paths=PackedStringArray("player") instance=ExtResource("6_u5sy4")]
 player = NodePath("../Player")
 spawn1 = ExtResource("2_iywne")
 spawn2 = ExtResource("2_iywne")
 spawn3 = ExtResource("2_iywne")
 spawn4 = ExtResource("2_iywne")
+
+[node name="MusicComponent" parent="." unique_id=34746561 instance=ExtResource("7_0tnpc")]
+tracks = Array[AudioStream]([ExtResource("8_vtaks"), ExtResource("9_kvpfn")])
+volume = -20.0
+autoplay = true

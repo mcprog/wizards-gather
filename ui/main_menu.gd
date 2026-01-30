@@ -5,11 +5,14 @@ class_name MainMenu extends Control
 @onready var sound_effect_component: SoundEffectComponent = $SoundEffectComponent
 @onready var music_component: MusicComponent = $MusicComponent
 @onready var mute_music_button: TextureButton = $MuteMusicButton
+@onready var mute_sound_effects_button: TextureButton = $MuteSoundEffectsButton
 
 const TO_GAME_SCENE = preload("res://ui/to_game.tscn")
 
 func _ready() -> void:
-	mute_music_button.button_pressed = SoundManager.music_muted
+	#mute_music_button.button_pressed = SoundManager.music_muted
+	mute_music_button.set_pressed_no_signal(SoundManager.music_muted)
+	mute_sound_effects_button.set_pressed_no_signal(SoundManager.sound_effects_muted)
 	music_component.play()
 
 func _on_play_dark_button_button_up() -> void:
@@ -28,11 +31,9 @@ func _on_quit_dark_button_button_down() -> void:
 
 
 func _on_mute_music_button_toggled(toggled_on: bool) -> void:
-	print_debug("toggling music mute")
 	SoundManager.toggle_mute_music()
 
 
 func _on_mute_sound_effects_button_toggled(toggled_on: bool) -> void:
-	print_debug("toggling sound effects mute")
 	SoundManager.toggle_mute_sound_effects()
 	

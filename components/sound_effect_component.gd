@@ -20,7 +20,6 @@ func play() -> void:
 	var pitch_scale = sound_effect.pitch_scale
 	volume_db = randf_range(volume_range.x, volume_range.y)
 	pitch_scale = randf_range(pitch_range.x, pitch_range.y)
-	print_debug("play() random ranges setup in SoundEffectComponent")
 	sound_effect.volume_db = volume_db
 	sound_effect.pitch_scale = pitch_scale
 	sound_effect.play(0)

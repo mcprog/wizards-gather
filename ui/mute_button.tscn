@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://1qy283jdgmp4"]
+
+[ext_resource type="Texture2D" uid="uid://ct82madvndmeh" path="res://textures/ui/Square-Dark-Default/Music-On.png" id="1_buhjs"]
+[ext_resource type="Texture2D" uid="uid://5q03qa0j8d5d" path="res://textures/ui/Square-Dark-Default/Music-Off.png" id="3_ls2kr"]
+
+[node name="MuteButton" type="TextureButton" unique_id=1263418128]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+toggle_mode = true
+texture_normal = ExtResource("1_buhjs")
+texture_pressed = ExtResource("3_ls2kr")

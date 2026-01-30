@@ -1,10 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://38yumuu1sa6s"]
+[gd_scene format=3 uid="uid://38yumuu1sa6s"]
 
 [ext_resource type="Script" uid="uid://cpqtaou4o0atg" path="res://components/sound_effect_component.gd" id="1_b18et"]
 
-[node name="SoundEffectComponent" type="Node2D"]
+[node name="SoundEffectComponent" type="Node2D" unique_id=1930588479]
 script = ExtResource("1_b18et")
 
-[node name="SoundEffect" type="AudioStreamPlayer2D" parent="."]
+[node name="SoundEffect" type="AudioStreamPlayer2D" parent="." unique_id=331008723]
+bus = &"Sound Effects"
 
 [connection signal="finished" from="SoundEffect" to="." method="_on_sound_effect_finished"]

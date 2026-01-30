@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://cq68pghecyjlq" path="res://fonts/Beholden-Bold-Italic.ttf" id="3_rmr83"]
 [ext_resource type="PackedScene" uid="uid://38yumuu1sa6s" path="res://components/sound_effect_component.tscn" id="7_ubpvv"]
 [ext_resource type="AudioStream" uid="uid://lon7qqu2r2by" path="res://audio/sound_effects/Item Switch.wav" id="8_arv2f"]
+[ext_resource type="PackedScene" uid="uid://1qy283jdgmp4" path="res://ui/mute_button.tscn" id="8_lsdqh"]
 
 [node name="MainMenu" type="Control" unique_id=1893868989]
 layout_mode = 3
@@ -31,6 +32,18 @@ volume = -15.0
 [node name="SoundEffectComponent" parent="." unique_id=878645178 instance=ExtResource("7_ubpvv")]
 position = Vector2(579, 294)
 sound = ExtResource("8_arv2f")
+
+[node name="MuteMusicButton" parent="." unique_id=1263418128 instance=ExtResource("8_lsdqh")]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_bottom = 0.0
+offset_left = -101.0
+offset_top = 31.0
+offset_right = -49.0
+offset_bottom = 82.0
+grow_horizontal = 0
+grow_vertical = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1860019046]
 layout_mode = 1
@@ -103,6 +116,7 @@ theme_override_fonts/font = ExtResource("2_wk0pr")
 theme_override_font_sizes/font_size = 48
 text = "QUIT"
 
+[connection signal="toggled" from="MuteMusicButton" to="." method="_on_mute_music_button_toggled"]
 [connection signal="button_down" from="VBoxContainer/PlayDarkButton" to="." method="_on_play_dark_button_button_down"]
 [connection signal="button_up" from="VBoxContainer/PlayDarkButton" to="." method="_on_play_dark_button_button_up"]
 [connection signal="button_down" from="VBoxContainer/QuitDarkButton" to="." method="_on_quit_dark_button_button_down"]

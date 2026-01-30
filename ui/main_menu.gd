@@ -28,5 +28,11 @@ func _on_quit_dark_button_button_down() -> void:
 
 
 func _on_mute_music_button_toggled(toggled_on: bool) -> void:
-	print_debug("toggling audio mute")
+	print_debug("toggling music mute")
 	SoundManager.toggle_mute_music()
+
+
+func _on_mute_sound_effects_button_toggled(toggled_on: bool) -> void:
+	print_debug("toggling sound effects mute")
+	SoundManager.toggle_mute_sound_effects()
+	

@@ -11,5 +11,5 @@ func _ready() -> void:
 	elif start_animation == PlayerAnimation.HURT:
 		animation_component.play_animation("hurt")
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	pass

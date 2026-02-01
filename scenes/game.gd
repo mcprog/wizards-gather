@@ -7,4 +7,4 @@ class_name Game extends Node2D
 @export_subgroup("Settings")
 @export var starter_units: Array[PackedScene]
 
-@onready var wand_cursor: WandCursor = $WandCursor
+# @onready var wand_cursor: WandCursor = $WandCursor

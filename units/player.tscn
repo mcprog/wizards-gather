@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://cs0802lhhv4fd"]
+[gd_scene format=3 uid="uid://cs0802lhhv4fd"]
 
 [ext_resource type="Script" uid="uid://bjdgqqbkcxe3e" path="res://units/player.gd" id="1_tis1o"]
 [ext_resource type="SpriteFrames" uid="uid://cgghydl16clso" path="res://textures/warrior.tres" id="2_wegok"]
-[ext_resource type="PackedScene" uid="uid://c3pcqblmrcbon" path="res://components/input_component.tscn" id="3_s4qu6"]
+[ext_resource type="PackedScene" path="res://components/input_component.tscn" id="3_s4qu6"]
 [ext_resource type="PackedScene" uid="uid://dbadshflbxqpt" path="res://components/movement_component.tscn" id="4_7bga3"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="5_7bga3"]
 [ext_resource type="PackedScene" uid="uid://d0eppyni6jg6m" path="res://components/gravity_component.tscn" id="6_txxjr"]
@@ -12,7 +12,7 @@
 radius = 8.0
 height = 38.0
 
-[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("input_component", "movement_component", "animation_component", "gravity_component", "health_component") groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1594584199 node_paths=PackedStringArray("input_component", "movement_component", "animation_component", "gravity_component", "health_component") groups=["player"]]
 scale = Vector2(2.5, 2.5)
 collision_layer = 2
 collision_mask = 57
@@ -23,23 +23,23 @@ animation_component = NodePath("AnimationComponent")
 gravity_component = NodePath("GravityComponent")
 health_component = NodePath("HealthComponent")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=933687799]
 sprite_frames = ExtResource("2_wegok")
 animation = &"idle"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=929851178]
 shape = SubResource("CapsuleShape2D_wegok")
 
-[node name="InputComponent" parent="." instance=ExtResource("3_s4qu6")]
+[node name="InputComponent" parent="." unique_id=1306833350 instance=ExtResource("3_s4qu6")]
 
-[node name="MovementComponent" parent="." instance=ExtResource("4_7bga3")]
+[node name="MovementComponent" parent="." unique_id=835118913 instance=ExtResource("4_7bga3")]
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("5_7bga3")]
+[node name="AnimationComponent" parent="." unique_id=1226843192 node_paths=PackedStringArray("sprite") instance=ExtResource("5_7bga3")]
 sprite = NodePath("../Sprite")
 
-[node name="GravityComponent" parent="." instance=ExtResource("6_txxjr")]
+[node name="GravityComponent" parent="." unique_id=1222469143 instance=ExtResource("6_txxjr")]
 
-[node name="HealthComponent" parent="." instance=ExtResource("7_o5fyc")]
+[node name="HealthComponent" parent="." unique_id=1331190770 instance=ExtResource("7_o5fyc")]
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

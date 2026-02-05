@@ -11,6 +11,7 @@ const TO_GAME_SCENE = preload("res://ui/to_game.tscn")
 
 func _ready() -> void:
 	#mute_music_button.button_pressed = SoundManager.music_muted
+	SoundManager.load_settings()
 	mute_music_button.set_pressed_no_signal(SoundManager.music_muted)
 	mute_sound_effects_button.set_pressed_no_signal(SoundManager.sound_effects_muted)
 	music_component.play()
@@ -20,6 +21,7 @@ func _on_play_dark_button_button_up() -> void:
 
 
 func _on_quit_dark_button_button_up() -> void:
+	SoundManager.save_settings()
 	get_tree().quit()
 
 

@@ -27,7 +27,6 @@ func load_settings():
 		set_music_mute(music_muted)
 		sound_effects_muted = config.get_value("Audio", "sfx", false)
 		set_sound_effects_mute(sound_effects_muted)
-		print_debug("Sound:", sound_effects_muted, "Music:", music_muted)
 	else:
 		print_debug("No settings file found or error: " , error)
 		save_settings()
@@ -40,7 +39,7 @@ func set_music_mute(muted: bool):
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), music_muted)
 
 func set_sound_effects_mute(muted: bool):
-	sound_effects_muted = music_muted
+	sound_effects_muted = muted
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Sound Effects"), sound_effects_muted)
 
 func toggle_mute_music():

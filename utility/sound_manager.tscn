@@ -8,4 +8,4 @@
 script = ExtResource("1_4b7sc")
 
 [node name="CoinPickupSfx" parent="." unique_id=285393589 instance=ExtResource("1_mvsh7")]
-sound = ExtResource("2_4b7sc")
+sounds = Array[AudioStream]([ExtResource("2_4b7sc")])

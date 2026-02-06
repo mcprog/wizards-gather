@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bp2hswxqf6mmi"
+path="res://.godot/imported/Pre Jump 4.wav-df2c1fd14e343ca50b377c7714f95708.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 4.wav"
+dest_files=["res://.godot/imported/Pre Jump 4.wav-df2c1fd14e343ca50b377c7714f95708.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

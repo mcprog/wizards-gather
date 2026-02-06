@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bnujnaqb750b6"
+path="res://.godot/imported/DIRT - Run Short 2.wav-589bffa16f8d3ee358241bdab503ce70.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Run/Dirt/DIRT - Run Short 2.wav"
+dest_files=["res://.godot/imported/DIRT - Run Short 2.wav-589bffa16f8d3ee358241bdab503ce70.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

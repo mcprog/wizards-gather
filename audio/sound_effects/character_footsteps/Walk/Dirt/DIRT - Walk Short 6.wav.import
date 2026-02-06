@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://byq1lt6nalvyj"
+path="res://.godot/imported/DIRT - Walk Short 6.wav-e8b8e6e0ea37b97b4a7278a82d9703ba.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Walk/Dirt/DIRT - Walk Short 6.wav"
+dest_files=["res://.godot/imported/DIRT - Walk Short 6.wav-e8b8e6e0ea37b97b4a7278a82d9703ba.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

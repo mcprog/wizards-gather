@@ -5,7 +5,7 @@
 [node name="SoundEffectComponent" type="Node2D" unique_id=1930588479]
 script = ExtResource("1_b18et")
 
-[node name="SoundEffect" type="AudioStreamPlayer2D" parent="." unique_id=331008723]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1724770857]
 bus = &"Sound Effects"
 
-[connection signal="finished" from="SoundEffect" to="." method="_on_sound_effect_finished"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_sound_effect_finished"]

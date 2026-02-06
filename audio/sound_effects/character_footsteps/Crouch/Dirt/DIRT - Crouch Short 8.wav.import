@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cldk3qqjl6d8v"
+path="res://.godot/imported/DIRT - Crouch Short 8.wav-6dc6d3153e6fd91a91db93611113ea23.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Crouch/Dirt/DIRT - Crouch Short 8.wav"
+dest_files=["res://.godot/imported/DIRT - Crouch Short 8.wav-6dc6d3153e6fd91a91db93611113ea23.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

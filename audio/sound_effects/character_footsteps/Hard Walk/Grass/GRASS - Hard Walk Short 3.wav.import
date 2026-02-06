@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://3qdwmdyxtktf"
+path="res://.godot/imported/GRASS - Hard Walk Short 3.wav-241db0a96c89b4400a8cbdfafcd07321.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Hard Walk/Grass/GRASS - Hard Walk Short 3.wav"
+dest_files=["res://.godot/imported/GRASS - Hard Walk Short 3.wav-241db0a96c89b4400a8cbdfafcd07321.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

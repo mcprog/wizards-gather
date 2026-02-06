@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dompqijoifacn"
+path="res://.godot/imported/GRASS - Run 8.wav-ca86087c8d5edc1b31d789fb71e71cac.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Run/Grass/GRASS - Run 8.wav"
+dest_files=["res://.godot/imported/GRASS - Run 8.wav-ca86087c8d5edc1b31d789fb71e71cac.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

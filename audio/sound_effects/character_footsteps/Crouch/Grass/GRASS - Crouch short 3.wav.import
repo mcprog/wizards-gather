@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bl7du1gvau8g8"
+path="res://.godot/imported/GRASS - Crouch short 3.wav-fedae2f7f7b4175428259f95474b4339.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Crouch/Grass/GRASS - Crouch short 3.wav"
+dest_files=["res://.godot/imported/GRASS - Crouch short 3.wav-fedae2f7f7b4175428259f95474b4339.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

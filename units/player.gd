@@ -12,6 +12,9 @@ enum PlayerAnimation {
 @export var animation_component: AnimationComponent
 @export var gravity_component: GravityComponent
 @export var health_component: HealthComponent
+@export var jump_sfx_component: SoundEffectComponent
+
+@onready var footsteps: Footsteps = $Footsteps
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,6 +29,9 @@ func _physics_process(delta: float) -> void:
 	if position.y > Constants.BOTTOM_PLATFORM_PX:
 		input_component.down_jump = false
 	movement_component.handle_movement(self, input_component.direction_x, input_component.down_jump, input_component.jump)
+	if input_component.jump or input_component.down_jump:
+		jump_sfx_component.play()
+	footsteps.valid = is_on_floor()
 	animation_component.handle_animation(input_component.direction_x, is_on_floor(), velocity.y)
 	
 	move_and_slide()

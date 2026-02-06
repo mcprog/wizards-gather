@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://biteconl5f5gi"
+path="res://.godot/imported/GRASS - Post Jump 8.wav-6266b785d1f302aa660ac4ab896799c5.sample"
+
+[deps]
+
+source_file="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Post Jump 8.wav"
+dest_files=["res://.godot/imported/GRASS - Post Jump 8.wav-6266b785d1f302aa660ac4ab896799c5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -2,17 +2,35 @@
 
 [ext_resource type="Script" uid="uid://bjdgqqbkcxe3e" path="res://units/player.gd" id="1_tis1o"]
 [ext_resource type="SpriteFrames" uid="uid://cgghydl16clso" path="res://textures/warrior.tres" id="2_wegok"]
-[ext_resource type="PackedScene" path="res://components/input_component.tscn" id="3_s4qu6"]
+[ext_resource type="PackedScene" uid="uid://c3pcqblmrcbon" path="res://components/input_component.tscn" id="3_s4qu6"]
 [ext_resource type="PackedScene" uid="uid://dbadshflbxqpt" path="res://components/movement_component.tscn" id="4_7bga3"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="5_7bga3"]
 [ext_resource type="PackedScene" uid="uid://d0eppyni6jg6m" path="res://components/gravity_component.tscn" id="6_txxjr"]
 [ext_resource type="PackedScene" uid="uid://cnm3b8mo6q2lo" path="res://components/health_component.tscn" id="7_o5fyc"]
+[ext_resource type="PackedScene" uid="uid://38yumuu1sa6s" path="res://components/sound_effect_component.tscn" id="8_o5fyc"]
+[ext_resource type="AudioStream" uid="uid://d4aa0e8q5l72x" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 1.wav" id="9_4ky5a"]
+[ext_resource type="AudioStream" uid="uid://chkwb0v3f1ymb" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 2.wav" id="10_wain3"]
+[ext_resource type="AudioStream" uid="uid://dn2tv4ek82yli" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 3.wav" id="11_nxywi"]
+[ext_resource type="AudioStream" uid="uid://bp2hswxqf6mmi" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 4.wav" id="12_vpvx0"]
+[ext_resource type="AudioStream" uid="uid://cptsj7j82700k" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 5.wav" id="13_4px0i"]
+[ext_resource type="AudioStream" uid="uid://b6hjgb8woyipn" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 6.wav" id="14_xfjbt"]
+[ext_resource type="AudioStream" uid="uid://c830hgbo0eibx" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 7.wav" id="15_kcujb"]
+[ext_resource type="AudioStream" uid="uid://cxy7ycecwtuxp" path="res://audio/sound_effects/character_footsteps/Jump/Dirt/Pre Jump 8.wav" id="16_rj554"]
+[ext_resource type="AudioStream" uid="uid://cc2tk86xmslt2" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 1.wav" id="17_wj8mq"]
+[ext_resource type="AudioStream" uid="uid://dy7cpdaeyobrc" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 3.wav" id="18_unmdw"]
+[ext_resource type="AudioStream" uid="uid://5o6nvwtdnnuw" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 4.wav" id="19_g6e83"]
+[ext_resource type="AudioStream" uid="uid://b24c0l4v7xsqm" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 5.wav" id="20_fopb1"]
+[ext_resource type="AudioStream" uid="uid://d4gou8r0jx5pf" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 6.wav" id="21_v1vwn"]
+[ext_resource type="AudioStream" uid="uid://bfth1bhrj4sqh" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 7.wav" id="22_hk2xk"]
+[ext_resource type="AudioStream" uid="uid://d1g65ahvchr5b" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 8.wav" id="23_17l3h"]
+[ext_resource type="AudioStream" uid="uid://dyubaafwi5fgk" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump  2.wav" id="24_yhcse"]
+[ext_resource type="PackedScene" uid="uid://cs72g43je1qj5" path="res://units/footsteps.tscn" id="25_unmdw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wegok"]
 radius = 8.0
 height = 38.0
 
-[node name="Player" type="CharacterBody2D" unique_id=1594584199 node_paths=PackedStringArray("input_component", "movement_component", "animation_component", "gravity_component", "health_component") groups=["player"]]
+[node name="Player" type="CharacterBody2D" unique_id=1594584199 node_paths=PackedStringArray("input_component", "movement_component", "animation_component", "gravity_component", "health_component", "jump_sfx_component") groups=["player"]]
 scale = Vector2(2.5, 2.5)
 collision_layer = 2
 collision_mask = 57
@@ -22,6 +40,7 @@ movement_component = NodePath("MovementComponent")
 animation_component = NodePath("AnimationComponent")
 gravity_component = NodePath("GravityComponent")
 health_component = NodePath("HealthComponent")
+jump_sfx_component = NodePath("JumpSfxComponent")
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=933687799]
 sprite_frames = ExtResource("2_wegok")
@@ -41,5 +60,12 @@ sprite = NodePath("../Sprite")
 [node name="GravityComponent" parent="." unique_id=1222469143 instance=ExtResource("6_txxjr")]
 
 [node name="HealthComponent" parent="." unique_id=1331190770 instance=ExtResource("7_o5fyc")]
+
+[node name="JumpSfxComponent" parent="." unique_id=1930588479 instance=ExtResource("8_o5fyc")]
+sounds = Array[AudioStream]([ExtResource("9_4ky5a"), ExtResource("10_wain3"), ExtResource("11_nxywi"), ExtResource("12_vpvx0"), ExtResource("13_4px0i"), ExtResource("14_xfjbt"), ExtResource("15_kcujb"), ExtResource("16_rj554"), ExtResource("17_wj8mq"), ExtResource("18_unmdw"), ExtResource("19_g6e83"), ExtResource("20_fopb1"), ExtResource("21_v1vwn"), ExtResource("22_hk2xk"), ExtResource("23_17l3h"), ExtResource("24_yhcse")])
+
+[node name="Footsteps" parent="." unique_id=446960326 instance=ExtResource("25_unmdw")]
+min_wait_time = 0.18
+max_wait_time = 0.5
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

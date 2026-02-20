@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ca0yenqiu0l4h"]
+
+[ext_resource type="Script" uid="uid://dp2ag3eeesgiy" path="res://utility/level_clear_trigger.gd" id="1_2p0rn"]
+[ext_resource type="Texture2D" uid="uid://l67s0nexkyw5" path="res://textures/world/level_clear_flag.png" id="2_00opc"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_wldn4"]
+
+[node name="LevelClearTrigger" type="Area2D" unique_id=1808915204]
+collision_mask = 2
+script = ExtResource("1_2p0rn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=600434983]
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_wldn4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1633064205]
+position = Vector2(65, 0)
+texture = ExtResource("2_00opc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

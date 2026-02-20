@@ -3,6 +3,8 @@ extends Node2D
 
 var sound_effects_muted: bool = false
 var music_muted: bool = false
+# settings volatile flag is for ignoring loaded config if the sound settings have been updated this game session
+var settings_volatile = false
 
 var config := ConfigFile.new()
 var save_path := "user://settings.cfg"
@@ -20,6 +22,9 @@ func save_settings():
 		print_debug("saved config file")
 
 func load_settings():
+	if settings_volatile:
+		return
+	
 	var error = config.load(save_path)
 	
 	if error == OK:
@@ -37,15 +42,19 @@ func play_coin_pickup():
 func set_music_mute(muted: bool):
 	music_muted = muted
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), music_muted)
+	settings_volatile = true
 
 func set_sound_effects_mute(muted: bool):
 	sound_effects_muted = muted
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Sound Effects"), sound_effects_muted)
+	settings_volatile = true
 
 func toggle_mute_music():
 	music_muted = not music_muted
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Music"), music_muted)
+	settings_volatile = true
 
 func toggle_mute_sound_effects():
 	sound_effects_muted = not sound_effects_muted
 	AudioServer.set_bus_mute(AudioServer.get_bus_index("Sound Effects"), sound_effects_muted)
+	settings_volatile = true

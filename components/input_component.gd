@@ -19,8 +19,8 @@ func handle_input():
 		
 	direction_x = Input.get_axis("left", "right")
 	
-	down_jump = Input.is_action_pressed("down")
-	jump = Input.is_action_pressed("jump")
+	down_jump = Input.is_action_pressed("down") or (clicked and click_position.y > Constants.HALF_GAME_PX_HEIGHT)
+	jump = Input.is_action_pressed("jump") or (clicked and click_position.y <= Constants.HALF_GAME_PX_HEIGHT)
 	
 	if Input.is_action_just_pressed("escape"):
 		get_tree().change_scene_to_packed(Constants.MAIN_MENU)

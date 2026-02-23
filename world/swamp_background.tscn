@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bpywo3bgfj66b"]
+
+[ext_resource type="Texture2D" uid="uid://dlprx450xctwl" path="res://textures/world/background/swamp_bg/BG_3.png" id="1_1ednm"]
+[ext_resource type="Texture2D" uid="uid://d22v4wjap6cyn" path="res://textures/world/background/swamp_bg/BG_3_alt.png" id="2_j4ptl"]
+[ext_resource type="Texture2D" uid="uid://c212o7ktifkip" path="res://textures/world/background/swamp_bg/BG_2.png" id="3_ef1pc"]
+[ext_resource type="Texture2D" uid="uid://k3mnhbfvf2tp" path="res://textures/world/background/swamp_bg/BG_1.png" id="4_jhnaq"]
+
+[node name="SwampBackground" type="Node2D" unique_id=548902137]
+
+[node name="ParallaxSky" type="Parallax2D" parent="." unique_id=351663377]
+scale = Vector2(2, 2)
+
+[node name="Sprite1" type="Sprite2D" parent="ParallaxSky" unique_id=1343574200]
+position = Vector2(0, 171)
+texture = ExtResource("1_1ednm")
+
+[node name="Sprite2" type="Sprite2D" parent="ParallaxSky" unique_id=1866978362]
+position = Vector2(2048, 171)
+texture = ExtResource("2_j4ptl")
+
+[node name="ParallaxColumn" type="Parallax2D" parent="." unique_id=2043297890]
+scale = Vector2(2, 2)
+repeat_size = Vector2(1817, 0)
+autoscroll = Vector2(25, 0)
+repeat_times = 4
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxColumn" unique_id=688212352]
+position = Vector2(0, 171)
+texture = ExtResource("3_ef1pc")
+
+[node name="ParallaxTrees" type="Parallax2D" parent="." unique_id=1616349913]
+scale = Vector2(2, 2)
+repeat_size = Vector2(1929, 0)
+autoscroll = Vector2(45, 0)
+repeat_times = 4
+
+[node name="Sprite" type="Sprite2D" parent="ParallaxTrees" unique_id=1023719122]
+position = Vector2(0, 171)
+texture = ExtResource("4_jhnaq")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://4umkcl650t6d"]
+[gd_scene format=3 uid="uid://4umkcl650t6d"]
 
 [ext_resource type="Texture2D" uid="uid://dmtlnv60ijh71" path="res://textures/world/background/cloud.png" id="2_d4pww"]
 [ext_resource type="Texture2D" uid="uid://cf0ih584v3q38" path="res://textures/world/background/sky.png" id="2_ixqen"]
@@ -6,57 +6,57 @@
 [ext_resource type="Texture2D" uid="uid://dofhpxpabrown" path="res://textures/world/background/pine2.png" id="4_mfksr"]
 [ext_resource type="Texture2D" uid="uid://gdn1trcdaasw" path="res://textures/world/background/pine1.png" id="5_x805q"]
 
-[node name="ForestBackground" type="Node2D"]
+[node name="ForestBackground" type="Node2D" unique_id=548902137]
 
-[node name="ParallaxSky" type="Parallax2D" parent="."]
+[node name="ParallaxSky" type="Parallax2D" parent="." unique_id=351663377]
 scale = Vector2(3.25, 3.25)
 repeat_size = Vector2(559, 0)
 repeat_times = 4
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="Sprite" type="Sprite2D" parent="ParallaxSky"]
+[node name="Sprite" type="Sprite2D" parent="ParallaxSky" unique_id=1343574200]
 position = Vector2(344, 105.53846)
 texture = ExtResource("2_ixqen")
 
-[node name="ParallaxClouds" type="Parallax2D" parent="."]
+[node name="ParallaxClouds" type="Parallax2D" parent="." unique_id=2043297890]
 scale = Vector2(4, 4)
 autoscroll = Vector2(25, 0)
 
-[node name="Sprite1" type="Sprite2D" parent="ParallaxClouds"]
+[node name="Sprite1" type="Sprite2D" parent="ParallaxClouds" unique_id=688212352]
 position = Vector2(317, 68)
 texture = ExtResource("2_d4pww")
 
-[node name="Sprite2" type="Sprite2D" parent="ParallaxClouds"]
+[node name="Sprite2" type="Sprite2D" parent="ParallaxClouds" unique_id=1818081249]
 position = Vector2(1070, 68)
 texture = ExtResource("2_d4pww")
 
-[node name="ParallaxMountains" type="Parallax2D" parent="."]
+[node name="ParallaxMountains" type="Parallax2D" parent="." unique_id=1616349913]
 scale = Vector2(4, 4)
 repeat_size = Vector2(668, 0)
 autoscroll = Vector2(30, 0)
 repeat_times = 4
 
-[node name="Sprite" type="Sprite2D" parent="ParallaxMountains"]
+[node name="Sprite" type="Sprite2D" parent="ParallaxMountains" unique_id=1023719122]
 position = Vector2(344, 108)
 texture = ExtResource("3_ixqen")
 
-[node name="ParallaxTreesBG" type="Parallax2D" parent="."]
+[node name="ParallaxTreesBG" type="Parallax2D" parent="." unique_id=1879843796]
 scale = Vector2(4, 4)
 repeat_size = Vector2(668, 0)
 autoscroll = Vector2(80, 0)
 repeat_times = 4
 
-[node name="Sprite" type="Sprite2D" parent="ParallaxTreesBG"]
+[node name="Sprite" type="Sprite2D" parent="ParallaxTreesBG" unique_id=1529683045]
 position = Vector2(344, 175.25)
 texture = ExtResource("4_mfksr")
 
-[node name="ParallaxTreesFG" type="Parallax2D" parent="."]
+[node name="ParallaxTreesFG" type="Parallax2D" parent="." unique_id=1062270456]
 scale = Vector2(4, 4)
 repeat_size = Vector2(668, 0)
 autoscroll = Vector2(100, 0)
 repeat_times = 4
 
-[node name="Sprite" type="Sprite2D" parent="ParallaxTreesFG"]
+[node name="Sprite" type="Sprite2D" parent="ParallaxTreesFG" unique_id=543482405]
 position = Vector2(344, 175.25)
 texture = ExtResource("5_x805q")

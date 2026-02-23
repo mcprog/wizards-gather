@@ -33,6 +33,7 @@ func _on_quit_dark_button_button_down() -> void:
 
 
 func _on_mute_music_button_toggled(_toggled_on: bool) -> void:
+	sound_effect_component.play()
 	SoundManager.toggle_mute_music()
 
 

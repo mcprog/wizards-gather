@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://ijfvv6tnsiyp" path="res://fonts/Beholden-Bold.ttf" id="2_wk0pr"]
 [ext_resource type="AudioStream" uid="uid://bf64jjcwi5ggd" path="res://audio/music/sunixmuz-bird-town.mp3" id="3_lsdqh"]
 [ext_resource type="FontFile" uid="uid://cq68pghecyjlq" path="res://fonts/Beholden-Bold-Italic.ttf" id="3_rmr83"]
+[ext_resource type="AudioStream" uid="uid://lon7qqu2r2by" path="res://audio/sound_effects/Item Switch.wav" id="7_jiymt"]
 [ext_resource type="PackedScene" uid="uid://38yumuu1sa6s" path="res://components/sound_effect_component.tscn" id="7_ubpvv"]
 [ext_resource type="PackedScene" uid="uid://1qy283jdgmp4" path="res://ui/mute_button.tscn" id="8_lsdqh"]
 [ext_resource type="PackedScene" uid="uid://yaoxor1xjwbx" path="res://ui/mute_sound_button.tscn" id="9_jiymt"]
@@ -31,6 +32,7 @@ volume = -15.0
 
 [node name="SoundEffectComponent" parent="." unique_id=878645178 instance=ExtResource("7_ubpvv")]
 position = Vector2(579, 294)
+sounds = Array[AudioStream]([ExtResource("7_jiymt")])
 
 [node name="MuteMusicButton" parent="." unique_id=1263418128 instance=ExtResource("8_lsdqh")]
 layout_mode = 1

@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dchdn868wr3tv" path="res://components/music_component.tscn" id="7_0tnpc"]
 [ext_resource type="AudioStream" uid="uid://tj4thhxr12vq" path="res://audio/music/sunixmuz-beauty-night.mp3" id="8_vtaks"]
 [ext_resource type="AudioStream" uid="uid://di7wkwxdwy6uj" path="res://audio/music/sunixmuz-fountain-of-life.mp3" id="9_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://bobjsg5wpka30" path="res://ui/pause_menu.tscn" id="10_vtaks"]
 
 [node name="Game" type="Node2D" unique_id=1143854297]
 script = ExtResource("1_yqjtg")
@@ -32,3 +33,15 @@ spawn4 = ExtResource("2_iywne")
 tracks = Array[AudioStream]([ExtResource("8_vtaks"), ExtResource("9_kvpfn")])
 volume = -20.0
 autoplay = true
+
+[node name="PauseMenu" parent="." unique_id=1736197485 instance=ExtResource("10_vtaks")]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 558.0
+offset_top = 280.0
+offset_right = 558.0
+offset_bottom = 280.0

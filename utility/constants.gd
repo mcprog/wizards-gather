@@ -11,6 +11,7 @@ const MAIN_MENU = preload("res://ui/main_menu.tscn")
 const GAME_ENTRY = preload("res://scenes/game.tscn")
 const DEATH_MENU = preload("res://ui/death.tscn")
 const SHOP_MENU = preload("res://ui/shop_menu.tscn")
+const PAUSE_MENU = preload("res://ui/pause_menu.tscn")
 
 # Groups
 const PLAYER_GLOBAL_GROUP_STRING = "player"

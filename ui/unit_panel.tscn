@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://ddj6ybpbwjx3a"]
+
+[ext_resource type="Script" uid="uid://swwjdykt0fbh" path="res://ui/unit_panel.gd" id="1_ldva1"]
+[ext_resource type="FontFile" uid="uid://bokwld3yet5yy" path="res://fonts/Beholden-Medium.ttf" id="1_qhcqa"]
+[ext_resource type="Texture2D" uid="uid://cnlu0bn424q1l" path="res://textures/units/MageLady.png" id="2_ya03d"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldva1"]
+bg_color = Color(0.037528023, 0.037528034, 0.037528023, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_735q8"]
+bg_color = Color(0, 0.3647059, 0, 1)
+border_width_right = 5
+border_color = Color(0, 0.3019608, 0, 1)
+
+[node name="UnitPanel" type="PanelContainer" unique_id=1374604251]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ldva1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1975740668]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=132568144]
+layout_mode = 2
+
+[node name="UnitNameLabel" type="Label" parent="MarginContainer/VBoxContainer" unique_id=1165723393]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_qhcqa")
+theme_override_font_sizes/font_size = 24
+text = "Name"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1334699401]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=808466899]
+layout_mode = 2
+texture = ExtResource("2_ya03d")
+expand_mode = 3
+
+[node name="StatsContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=963705827]
+layout_mode = 2
+
+[node name="HealthProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=1529485035]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ldva1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_735q8")
+value = 50.0
+show_percentage = false
+
+[node name="StatsLineItem1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=492039923]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem1" unique_id=762970151]
+layout_mode = 2
+text = "Stat 1"
+
+[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem1" unique_id=2059144141]
+layout_mode = 2
+text = "Val 1"
+horizontal_alignment = 2
+
+[node name="StatsLineItem2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=770310341]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem2" unique_id=418849783]
+layout_mode = 2
+text = "Stat 2"
+
+[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem2" unique_id=1472527813]
+layout_mode = 2
+text = "Val 2"
+horizontal_alignment = 2
+
+[node name="StatsLineItem3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=1119108747]
+layout_mode = 2
+
+[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem3" unique_id=1512772004]
+layout_mode = 2
+text = "Stat 3"
+
+[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem3" unique_id=507325357]
+layout_mode = 2
+text = "Val 3"
+horizontal_alignment = 2

@@ -1,12 +1,5 @@
 class_name PauseMenu extends Control
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("escape"):
 		if get_tree().paused:
@@ -15,7 +8,6 @@ func _process(delta: float) -> void:
 		else:
 			get_tree().paused = true
 			show()
-
 
 func _on_quit_dark_button_button_up() -> void:
 	get_tree().paused = false

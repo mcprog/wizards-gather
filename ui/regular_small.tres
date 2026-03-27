@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://blmbtyvjusemv"]
+
+[ext_resource type="FontFile" uid="uid://bfeyeolwww868" path="res://fonts/Beholden-Regular.ttf" id="1_dmvkg"]
+
+[resource]
+font = ExtResource("1_dmvkg")
+font_size = 18

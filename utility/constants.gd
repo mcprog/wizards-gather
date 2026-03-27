@@ -37,3 +37,6 @@ const PURE_CRIT_ICON = preload("res://textures/ui/damage_number/crit_icon_pure.p
 const BASIC_DAMAGE_COLOR = Color.FLORAL_WHITE
 const PURE_DAMAGE_COLOR = Color.LIGHT_STEEL_BLUE
 const CRIT_DAMAGE_COLOR = Color.INDIAN_RED
+
+# Math
+const E = 0.0000000001

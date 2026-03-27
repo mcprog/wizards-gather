@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://swwjdykt0fbh" path="res://ui/unit_panel.gd" id="1_ldva1"]
 [ext_resource type="FontFile" uid="uid://bokwld3yet5yy" path="res://fonts/Beholden-Medium.ttf" id="1_qhcqa"]
 [ext_resource type="Texture2D" uid="uid://cnlu0bn424q1l" path="res://textures/units/MageLady.png" id="2_ya03d"]
+[ext_resource type="FontFile" uid="uid://chuqaxvn1n62b" path="res://fonts/Beholden-Italic.ttf" id="4_735q8"]
+[ext_resource type="LabelSettings" uid="uid://blmbtyvjusemv" path="res://ui/regular_small.tres" id="5_ngkqu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ldva1"]
 bg_color = Color(0.037528023, 0.037528034, 0.037528023, 1)
@@ -11,6 +13,11 @@ bg_color = Color(0.037528023, 0.037528034, 0.037528023, 1)
 bg_color = Color(0, 0.3647059, 0, 1)
 border_width_right = 5
 border_color = Color(0, 0.3019608, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngkqu"]
+bg_color = Color(0, 0.4745098, 1, 1)
+border_width_right = 5
+border_color = Color(0, 0.23293304, 0.5186961, 1)
 
 [node name="UnitPanel" type="PanelContainer" unique_id=1374604251]
 anchors_preset = 15
@@ -48,45 +55,94 @@ expand_mode = 3
 layout_mode = 2
 
 [node name="HealthProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=1529485035]
-custom_minimum_size = Vector2(0, 5)
+custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_ldva1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_735q8")
 value = 50.0
 show_percentage = false
 
-[node name="StatsLineItem1" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=492039923]
+[node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/HealthProgressBar" unique_id=1057511158]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_735q8")
+theme_override_font_sizes/font_size = 8
+text = "health"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ManaProgressBar" type="ProgressBar" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=664010662]
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_ldva1")
+theme_override_styles/fill = SubResource("StyleBoxFlat_ngkqu")
+value = 50.0
+show_percentage = false
+
+[node name="HealthLabel2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/ManaProgressBar" unique_id=446041382]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = -4.5
+offset_right = 10.0
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_735q8")
+theme_override_font_sizes/font_size = 8
+text = "mana"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatsLineItemDamage" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=492039923]
 layout_mode = 2
 
-[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem1" unique_id=762970151]
+[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemDamage" unique_id=762970151]
 layout_mode = 2
-text = "Stat 1"
+size_flags_horizontal = 3
+text = "Damage"
+label_settings = ExtResource("5_ngkqu")
 
-[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem1" unique_id=2059144141]
+[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemDamage" unique_id=2059144141]
 layout_mode = 2
 text = "Val 1"
+label_settings = ExtResource("5_ngkqu")
 horizontal_alignment = 2
 
-[node name="StatsLineItem2" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=770310341]
+[node name="StatsLineItemCritChance" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=776135887]
 layout_mode = 2
 
-[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem2" unique_id=418849783]
+[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritChance" unique_id=218981753]
 layout_mode = 2
-text = "Stat 2"
+size_flags_horizontal = 3
+text = "Crit Chance"
+label_settings = ExtResource("5_ngkqu")
 
-[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem2" unique_id=1472527813]
+[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritChance" unique_id=413945772]
 layout_mode = 2
 text = "Val 2"
+label_settings = ExtResource("5_ngkqu")
 horizontal_alignment = 2
 
-[node name="StatsLineItem3" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=1119108747]
+[node name="StatsLineItemCritDamage" type="HBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer" unique_id=141518849]
 layout_mode = 2
 
-[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem3" unique_id=1512772004]
+[node name="StatLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritDamage" unique_id=1684265527]
 layout_mode = 2
-text = "Stat 3"
+size_flags_horizontal = 3
+text = "Crit Damage"
+label_settings = ExtResource("5_ngkqu")
 
-[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItem3" unique_id=507325357]
+[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritDamage" unique_id=2054200582]
 layout_mode = 2
 text = "Val 3"
+label_settings = ExtResource("5_ngkqu")
 horizontal_alignment = 2

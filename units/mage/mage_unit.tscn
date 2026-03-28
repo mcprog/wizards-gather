@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://yu1c8v3qgvuj"]
+[gd_scene format=3 uid="uid://yu1c8v3qgvuj"]
 
 [ext_resource type="Script" uid="uid://bxivrbj6tcc6f" path="res://units/mage/mage_unit.gd" id="1_m20bd"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="3_i0d24"]
 [ext_resource type="PackedScene" uid="uid://ecoqexfwkev3" path="res://components/attack_component.tscn" id="3_p0chn"]
+[ext_resource type="PackedScene" uid="uid://cnm3b8mo6q2lo" path="res://components/health_component.tscn" id="4_3y5vo"]
 [ext_resource type="SpriteFrames" uid="uid://bml0olv6gk0f2" path="res://textures/units/mage/wizard.tres" id="4_hnsjg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_p0chn"]
@@ -12,31 +13,34 @@ radius = 134.09325
 radius = 7.0
 height = 24.0
 
-[node name="MageUnit" type="Area2D" node_paths=PackedStringArray("animation_component", "attack_component")]
+[node name="MageUnit" type="Area2D" unique_id=1613695090 node_paths=PackedStringArray("animation_component", "attack_component", "health_component")]
 collision_layer = 2
 collision_mask = 56
 script = ExtResource("1_m20bd")
 animation_component = NodePath("AnimationComponent")
 attack_component = NodePath("AttackComponent")
+health_component = NodePath("HealthComponent")
 
-[node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("3_i0d24")]
+[node name="AnimationComponent" parent="." unique_id=1062114870 node_paths=PackedStringArray("sprite") instance=ExtResource("3_i0d24")]
 sprite = NodePath("../Sprite")
 
-[node name="AttackComponent" parent="." node_paths=PackedStringArray("shape") instance=ExtResource("3_p0chn")]
+[node name="AttackComponent" parent="." unique_id=103561271 node_paths=PackedStringArray("shape") instance=ExtResource("3_p0chn")]
 collision_layer = 4
 collision_mask = 8
 shape = NodePath("CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent" unique_id=1131883160]
 shape = SubResource("CircleShape2D_p0chn")
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="HealthComponent" parent="." unique_id=1879961624 instance=ExtResource("4_3y5vo")]
+
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1659405124]
 position = Vector2(7, -6)
 sprite_frames = ExtResource("4_hnsjg")
 animation = &"run"
 frame_progress = 0.30322576
 
-[node name="AttackTimer" type="Timer" parent="."]
+[node name="AttackTimer" type="Timer" parent="." unique_id=1418685096]
 
-[node name="Hurtbox" type="CollisionShape2D" parent="."]
+[node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=1020057434]
 shape = SubResource("CapsuleShape2D_p0chn")

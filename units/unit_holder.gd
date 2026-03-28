@@ -26,6 +26,7 @@ var unit4_type: UnitType
 signal setup_complete
 
 enum UnitType {
+	NONE,
 	MAGE,
 	SHIFTER,
 	CLERIC,
@@ -34,11 +35,11 @@ enum UnitType {
 	BARD,
 	MONK,
 	TEMPLAR,
-	HIGH_ELF,
-	NONE
+	HIGH_ELF
 }
 
 static func get_unit_name(unit: UnitType):
+	print_debug(unit)
 	match (unit):
 		UnitType.MAGE:
 			return "Mage"
@@ -67,6 +68,7 @@ func determine_unit_type(scene: PackedScene) -> UnitType:
 		"mage_unit":
 			print_debug("setting unit type to Mage")
 			return UnitType.MAGE
+	print_debug("Failed to find unit type")
 	return UnitType.NONE
 		
 

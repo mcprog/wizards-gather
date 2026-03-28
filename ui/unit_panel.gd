@@ -7,6 +7,8 @@ class_name UnitPanel extends PanelContainer
 @onready var health_progress_bar: ProgressBar = $MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/HealthProgressBar
 @onready var mana_progress_bar: ProgressBar = $MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/ManaProgressBar
 @onready var unit_name_label: Label = $MarginContainer/VBoxContainer/UnitNameLabel
+@onready var health_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/HealthProgressBar/HealthLabel
+@onready var mana_label: Label = $MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/ManaProgressBar/ManaLabel
 
 const ANIMATION_DURATION = 1.5
 
@@ -38,13 +40,14 @@ func set_values(max_health: float, health: float, damage: float, crit_chance: fl
 	
 	# health progress bar
 	health_progress_bar.max_value = target_health
-	
+	health_label.text = "%.0f/%.0f" % [health, max_health]
 	if abs(target_health - health_progress_bar.value) > Constants.E:
 		if health_tween:
 			health_tween.kill()
 		health_tween = create_tween()
 		health_tween.tween_property(health_progress_bar, "value", target_health, ANIMATION_DURATION)
 	
+	mana_label.text = "%.1f/s" % mana_regen 
 	
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

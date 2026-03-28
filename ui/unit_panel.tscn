@@ -83,7 +83,7 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_ngkqu")
 value = 50.0
 show_percentage = false
 
-[node name="HealthLabel2" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/ManaProgressBar" unique_id=446041382]
+[node name="ManaLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/ManaProgressBar" unique_id=446041382]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

@@ -17,6 +17,7 @@ func prepare(unit1: UnitHolder.UnitType, unit2: UnitHolder.UnitType, unit3: Unit
 	if unit2 == UnitHolder.UnitType.NONE:
 		return
 	unit_panel_2.show()
+	print_debug("unit 2 panel active")
 	unit_panel_2.prepare(UnitHolder.get_unit_name(unit2))
 	if unit3 == UnitHolder.UnitType.NONE:
 		return
@@ -27,6 +28,22 @@ func prepare(unit1: UnitHolder.UnitType, unit2: UnitHolder.UnitType, unit3: Unit
 	unit_panel_4.show()
 	unit_panel_4.prepare(UnitHolder.get_unit_name(unit4))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func update_panel(unit, panel: UnitPanel):
+	assert(unit.has_method("get_stats"), "Minions must have required method: get_stats()")
+	var unit_stats = unit.get_stats()
+	if abs(panel.mana_progress_bar.value - unit_stats[9]) > Constants.E:
+		panel.set_values(unit_stats[1], unit_stats[0], unit_stats[4], unit_stats[5], unit_stats[10])
+
+func update(unit1, unit2, unit3, unit4):
+	if not unit1:
+		return
+	update_panel(unit1, unit_panel_1)
+	if not unit2:
+		return
+	update_panel(unit2, unit_panel_2)
+	if not unit3:
+		return
+	update_panel(unit3, unit_panel_3)
+	if not unit4:
+		return
+	update_panel(unit4, unit_panel_4)

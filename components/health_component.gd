@@ -24,6 +24,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	process_health_regen(delta)
 
+func get_stats():
+	return [current_health, max_health, armor, health_regen]
+
 ## Handles health regeneration per tick
 func process_health_regen(delta: float) -> void:
 	if current_health < max_health:

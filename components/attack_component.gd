@@ -39,6 +39,8 @@ func _process(delta: float) -> void:
 	process_targeting()
 	process_mana_regen(delta)
 
+func get_stats():
+	return [damage, crit_chance, crit_damage, max_mana, current_mana, attack_speed, mana_regen]
 
 ## Attempts to select target for the unit attached
 func process_targeting() -> void:

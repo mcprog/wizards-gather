@@ -24,10 +24,10 @@ func _ready() -> void:
 func _process(_delta: float) -> void:
 	global_rotation = 0.0
 	if attack_component.has_target and not is_attacking:
-			if attack_component.has_max_mana:
-				fire_special(attack_component.target)
-			else:
-				fire_attack(attack_component.target)
+		if attack_component.has_max_mana:
+			fire_special(attack_component.target)
+		else:
+			fire_attack(attack_component.target)
 
 # Should return this array: [current_health, max_health, armor, health_regen, damage, crit_chance, crit_damage, max_mana, current_mana, attack_speed, mana_regen]
 func get_stats():
@@ -37,8 +37,10 @@ func get_stats():
 
 func fire_attack(target: Node2D) -> void:
 	var fireball: Fireball = fireball_obj.instantiate()
-	fireball.prepare(attack_component.target.position - self.position, attack_component.damage, attack_component.roll_crit())
-	get_tree().root.add_child(fireball)
+	fireball.global_position = self.global_position
+	var direction = (self.global_position - attack_component.target.global_position)
+	fireball.prepare(direction, attack_component.damage, attack_component.roll_crit())
+	get_tree().current_scene.add_child(fireball)
 	# Set attack speed timer and flag
 	attack_timer.start(attack_component.get_attack_speed_as_duration())
 	is_attacking = true
@@ -46,6 +48,8 @@ func fire_attack(target: Node2D) -> void:
 	
 func fire_special(_target: Node2D) -> void:
 	attack_component.reset_manabar()
+	attack_timer.start(attack_component.get_attack_speed_as_duration())
+	is_attacking = true
 
 
 func _on_attack_timer_timeout() -> void:

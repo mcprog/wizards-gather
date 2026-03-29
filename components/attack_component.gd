@@ -77,7 +77,7 @@ func reset_manabar() -> void:
 
 
 func select_target() -> Node2D:
-	for area in get_overlapping_areas():
-		if area.is_in_group("enemy") and area.is_in_group("hurtbox"):
-			return area.owner
+	for body in get_overlapping_bodies():
+		if body.is_in_group("enemy"):
+			return body.owner
 	return null

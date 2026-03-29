@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://3sqik23p6ong"]
+[gd_scene format=3 uid="uid://3sqik23p6ong"]
 
 [ext_resource type="Script" uid="uid://cf0xnr8llwl03" path="res://enemies/goblin_enemy.gd" id="1_j58pd"]
 [ext_resource type="PackedScene" uid="uid://cafjk8s7jphbo" path="res://components/animation_component.tscn" id="2_jtbjf"]
@@ -14,7 +14,7 @@ radius = 126.14278
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x02xl"]
 radius = 12.0
 
-[node name="GoblinEnemy" type="CharacterBody2D" node_paths=PackedStringArray("animation_component", "attack_component", "health_component", "infobar_component", "gravity_component") groups=["enemy"]]
+[node name="GoblinEnemy" type="CharacterBody2D" unique_id=270443289 node_paths=PackedStringArray("animation_component", "attack_component", "health_component", "infobar_component", "gravity_component") groups=["enemy"]]
 collision_layer = 8
 collision_mask = 7
 script = ExtResource("1_j58pd")
@@ -24,28 +24,28 @@ health_component = NodePath("HealthComponent")
 infobar_component = NodePath("InfobarComponent")
 gravity_component = NodePath("GravityComponent")
 
-[node name="AnimationComponent" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("2_jtbjf")]
+[node name="AnimationComponent" parent="." unique_id=1336111977 node_paths=PackedStringArray("sprite") instance=ExtResource("2_jtbjf")]
 sprite = NodePath("../Sprite")
 
-[node name="AttackComponent" parent="." node_paths=PackedStringArray("shape") instance=ExtResource("3_3sse3")]
+[node name="AttackComponent" parent="." unique_id=2041463924 node_paths=PackedStringArray("shape") instance=ExtResource("3_3sse3")]
 collision_layer = 16
 collision_mask = 2
 shape = NodePath("CollisionShape2D")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackComponent" unique_id=900467010]
 shape = SubResource("CircleShape2D_jtbjf")
 
-[node name="HealthComponent" parent="." instance=ExtResource("4_py6py")]
+[node name="HealthComponent" parent="." unique_id=493694094 instance=ExtResource("4_py6py")]
 
-[node name="InfobarComponent" parent="." instance=ExtResource("5_0kuod")]
+[node name="InfobarComponent" parent="." unique_id=523390198 instance=ExtResource("5_0kuod")]
 
-[node name="GravityComponent" parent="." instance=ExtResource("6_jtbjf")]
+[node name="GravityComponent" parent="." unique_id=1083321228 instance=ExtResource("6_jtbjf")]
 
-[node name="Sprite" type="AnimatedSprite2D" parent="."]
+[node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=1626933661]
 sprite_frames = ExtResource("6_jx2n1")
 animation = &"idle"
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["hurtbox"]]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1821998739 groups=["hurtbox"]]
 position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_x02xl")

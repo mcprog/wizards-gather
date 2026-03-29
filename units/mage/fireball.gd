@@ -7,7 +7,7 @@ class_name Fireball extends Node2D
 #var explosion_scene = load("res://sources/characters/mage/fireball_explosion.tscn")
 
 var direction: Vector2 = Vector2.ZERO
-var speed: float = 100
+var speed: float = 500
 
 var damage = 0
 var crit = false

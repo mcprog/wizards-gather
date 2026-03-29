@@ -14,6 +14,7 @@ radius = 7.0
 height = 24.0
 
 [node name="MageUnit" type="Area2D" unique_id=1613695090 node_paths=PackedStringArray("animation_component", "attack_component", "health_component")]
+scale = Vector2(2, 2)
 collision_layer = 2
 collision_mask = 56
 script = ExtResource("1_m20bd")
@@ -44,3 +45,5 @@ frame_progress = 0.30322576
 
 [node name="Hurtbox" type="CollisionShape2D" parent="." unique_id=1020057434]
 shape = SubResource("CapsuleShape2D_p0chn")
+
+[connection signal="timeout" from="AttackTimer" to="." method="_on_attack_timer_timeout"]

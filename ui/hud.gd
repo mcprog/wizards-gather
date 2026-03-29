@@ -32,7 +32,7 @@ func update_panel(unit, panel: UnitPanel):
 	assert(unit.has_method("get_stats"), "Minions must have required method: get_stats()")
 	var unit_stats = unit.get_stats()
 	if abs(panel.mana_progress_bar.value - unit_stats[9]) > Constants.E:
-		panel.set_values(unit_stats[1], unit_stats[0], unit_stats[4], unit_stats[5], unit_stats[10])
+		panel.set_values(unit_stats[1], unit_stats[0], unit_stats[4], unit_stats[5], unit_stats[6], unit_stats[10], unit_stats[7], unit_stats[8])
 
 func update(unit1, unit2, unit3, unit4):
 	if not unit1:

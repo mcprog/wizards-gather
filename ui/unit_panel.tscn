@@ -59,7 +59,6 @@ custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_ldva1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_735q8")
-value = 50.0
 show_percentage = false
 
 [node name="HealthLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/HealthProgressBar" unique_id=1057511158]
@@ -80,7 +79,6 @@ custom_minimum_size = Vector2(0, 8)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxFlat_ldva1")
 theme_override_styles/fill = SubResource("StyleBoxFlat_ngkqu")
-value = 50.0
 show_percentage = false
 
 [node name="ManaLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/ManaProgressBar" unique_id=446041382]
@@ -111,7 +109,7 @@ size_flags_horizontal = 3
 text = "Damage"
 label_settings = ExtResource("5_ngkqu")
 
-[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemDamage" unique_id=2059144141]
+[node name="DamageValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemDamage" unique_id=2059144141]
 layout_mode = 2
 text = "Val 1"
 label_settings = ExtResource("5_ngkqu")
@@ -126,7 +124,7 @@ size_flags_horizontal = 3
 text = "Crit Chance"
 label_settings = ExtResource("5_ngkqu")
 
-[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritChance" unique_id=413945772]
+[node name="CritChanceValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritChance" unique_id=413945772]
 layout_mode = 2
 text = "Val 2"
 label_settings = ExtResource("5_ngkqu")
@@ -141,7 +139,7 @@ size_flags_horizontal = 3
 text = "Crit Damage"
 label_settings = ExtResource("5_ngkqu")
 
-[node name="ValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritDamage" unique_id=2054200582]
+[node name="CritDamageValueLabel" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer/StatsContainer/StatsLineItemCritDamage" unique_id=2054200582]
 layout_mode = 2
 text = "Val 3"
 label_settings = ExtResource("5_ngkqu")

@@ -28,6 +28,7 @@ func _process(_delta: float) -> void:
 				fire_special(attack_component.target)
 			else:
 				fire_attack(attack_component.target)
+
 # Should return this array: [current_health, max_health, armor, health_regen, damage, crit_chance, crit_damage, max_mana, current_mana, attack_speed, mana_regen]
 func get_stats():
 	var health_stats = health_component.get_stats()

@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bdvfr8bw3b7cm"]
+
+[ext_resource type="PackedScene" uid="uid://yu1c8v3qgvuj" path="res://units/mage/mage_unit.tscn" id="1_x353t"]
+[ext_resource type="PackedScene" uid="uid://3sqik23p6ong" path="res://enemies/goblin_enemy.tscn" id="2_knrx7"]
+[ext_resource type="PackedScene" uid="uid://cnj11kj1kqvcs" path="res://utility/simple_ground.tscn" id="3_o6j3i"]
+
+[node name="TestUnit" type="Node2D" unique_id=1724121790]
+
+[node name="MageUnit" parent="." unique_id=1613695090 instance=ExtResource("1_x353t")]
+position = Vector2(285, 315)
+
+[node name="GoblinEnemy" parent="." unique_id=270443289 instance=ExtResource("2_knrx7")]
+position = Vector2(424, 105)
+
+[node name="SimpleGround" parent="." unique_id=989168830 instance=ExtResource("3_o6j3i")]
+position = Vector2(428, 143)

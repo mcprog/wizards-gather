@@ -14,7 +14,7 @@ var crit = false
 
 
 func prepare(dir: Vector2, dmg: float, is_crit: bool) -> void:
-	self.direction = dir
+	self.direction = dir.normalized()
 	self.damage = dmg
 	self.crit = is_crit
 
@@ -26,7 +26,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	self.position += direction.normalized() * speed * delta
+	self.position += direction * speed * delta
 
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:

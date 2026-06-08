@@ -37,15 +37,11 @@ func get_stats():
 
 func fire_attack(target: Node2D) -> void:
 	var fireball: Fireball = fireball_obj.instantiate()
-	fireball.global_position = self.global_position
-	print(attack_component.target.name)
-	print_debug(attack_component.target.global_position)
-	print_debug(global_position)
-	
 	var direction = (attack_component.target.global_position - self.global_position)
-	print(direction.normalized())
 	fireball.prepare(direction, attack_component.damage, attack_component.roll_crit())
-	get_tree().current_scene.add_child(fireball)
+	var world = get_tree().get_first_node_in_group("world")
+	world.add_child(fireball)
+	fireball.global_position = self.global_position
 	# Set attack speed timer and flag
 	attack_timer.start(attack_component.get_attack_speed_as_duration())
 	is_attacking = true

@@ -44,6 +44,9 @@ func get_stats():
 
 ## Attempts to select target for the unit attached
 func process_targeting() -> void:
+	if target != null and not get_overlapping_bodies().has(target):
+		target = null
+		
 	if target == null:
 		target = select_target()
 	# Set has_target bool

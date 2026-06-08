@@ -21,7 +21,7 @@ func prepare(dir: Vector2, dmg: float, is_crit: bool) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	look_at(direction)
+	rotation = direction.angle()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

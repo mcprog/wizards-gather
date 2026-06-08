@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dpb1h5sofijnv"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yf2s6"]
+
+[node name="TestGround" type="StaticBody2D" unique_id=322064218]
+position = Vector2(0, 527)
+collision_mask = 42
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1116289810]
+shape = SubResource("WorldBoundaryShape2D_yf2s6")

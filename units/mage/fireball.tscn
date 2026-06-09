@@ -13,6 +13,8 @@ script = ExtResource("1_xx1ne")
 texture = ExtResource("1_3b6we")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=695962099]
+collision_layer = 4
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=442205028]
 position = Vector2(1, -1)
@@ -20,4 +22,5 @@ shape = SubResource("CircleShape2D_3b6we")
 
 [node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="." unique_id=976677403]
 
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

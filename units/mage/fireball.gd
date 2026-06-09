@@ -9,20 +9,15 @@ class_name Fireball extends Node2D
 var direction: Vector2 = Vector2.ZERO
 var speed: float = 500
 
-var damage = 0
-var crit = false
-
+var hit_data: HitData
 
 func prepare(dir: Vector2, dmg: float, is_crit: bool) -> void:
-	self.direction = dir.normalized()
-	self.damage = dmg
-	self.crit = is_crit
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
+	direction = dir.normalized()
 	rotation = direction.angle()
-
+	hit_data = HitData.new()
+	hit_data.damage = dmg
+	hit_data.is_crit = is_crit
+	hit_data.on_hit_effects = { HitData.HitEffect.BURN: 1 }
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -31,3 +26,10 @@ func _process(delta: float) -> void:
 
 func _on_visible_on_screen_notifier_2d_screen_exited() -> void:
 	queue_free() # Replace with function body.
+
+
+func _on_hitbox_area_entered(area: Area2D) -> void:
+	if area is HurtboxComponent:
+		hit_data.damage_position = position
+		area.recieve_hit(hit_data)
+		queue_free()

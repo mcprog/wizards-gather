@@ -25,10 +25,15 @@
 [ext_resource type="AudioStream" uid="uid://d1g65ahvchr5b" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump 8.wav" id="23_17l3h"]
 [ext_resource type="AudioStream" uid="uid://dyubaafwi5fgk" path="res://audio/sound_effects/character_footsteps/Jump/Grass/GRASS - Pre Jump  2.wav" id="24_yhcse"]
 [ext_resource type="PackedScene" uid="uid://cs72g43je1qj5" path="res://units/footsteps.tscn" id="25_unmdw"]
+[ext_resource type="PackedScene" uid="uid://btqe6h3qpt5b2" path="res://components/hurtbox_component.tscn" id="26_g6e83"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wegok"]
 radius = 8.0
 height = 38.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g6e83"]
+radius = 6.3999996
+height = 35.999996
 
 [node name="Player" type="CharacterBody2D" unique_id=1594584199 node_paths=PackedStringArray("input_component", "movement_component", "animation_component", "gravity_component", "health_component", "jump_sfx_component") groups=["player"]]
 scale = Vector2(2.5, 2.5)
@@ -67,5 +72,11 @@ sounds = Array[AudioStream]([ExtResource("9_4ky5a"), ExtResource("10_wain3"), Ex
 [node name="Footsteps" parent="." unique_id=446960326 instance=ExtResource("25_unmdw")]
 min_wait_time = 0.18
 max_wait_time = 0.5
+
+[node name="HurtboxComponent" parent="." unique_id=456107147 node_paths=PackedStringArray("health_component") instance=ExtResource("26_g6e83")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" unique_id=1188842780]
+shape = SubResource("CapsuleShape2D_g6e83")
 
 [connection signal="animation_finished" from="Sprite" to="." method="_on_sprite_animation_finished"]

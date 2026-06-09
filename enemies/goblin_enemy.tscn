@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dphxai0c4llji" path="res://components/infobar_component.tscn" id="5_0kuod"]
 [ext_resource type="PackedScene" uid="uid://d0eppyni6jg6m" path="res://components/gravity_component.tscn" id="6_jtbjf"]
 [ext_resource type="SpriteFrames" uid="uid://drwrcnun1x3dn" path="res://textures/goblin.tres" id="6_jx2n1"]
+[ext_resource type="PackedScene" uid="uid://btqe6h3qpt5b2" path="res://components/hurtbox_component.tscn" id="8_3sse3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jtbjf"]
 radius = 126.14278
@@ -14,9 +15,12 @@ radius = 126.14278
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x02xl"]
 radius = 12.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_py6py"]
+radius = 13.0
+height = 34.0
+
 [node name="GoblinEnemy" type="CharacterBody2D" unique_id=270443289 node_paths=PackedStringArray("animation_component", "attack_component", "health_component", "infobar_component", "gravity_component") groups=["enemy"]]
 collision_layer = 8
-collision_mask = 5
 script = ExtResource("1_j58pd")
 animation_component = NodePath("AnimationComponent")
 attack_component = NodePath("AttackComponent")
@@ -49,3 +53,12 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1821998739 groups=["hurtbox"]]
 position = Vector2(0, 11)
 shape = SubResource("CapsuleShape2D_x02xl")
+
+[node name="HurtboxComponent" parent="." unique_id=456107147 node_paths=PackedStringArray("health_component") instance=ExtResource("8_3sse3")]
+collision_layer = 8
+collision_mask = 4
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent" unique_id=528208700]
+position = Vector2(0, 9)
+shape = SubResource("CapsuleShape2D_py6py")
